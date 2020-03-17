@@ -1,0 +1,95 @@
+saasini@lx9-fuxi043:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit 317399bfea6619b69de9251cfe6f62407982ba6c
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Tue Mar 17 12:46:03 2020 +0200
+
+    aa
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 81f0c3372225464cea44e3f39f790c913b214014
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Tue Mar 17 12:42:37 2020 +0200
+
+    Haha
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 708dcc32c770904e6b430a6b2ba98e7ec626d17c
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Tue Mar 17 12:30:39 2020 +0200
+
+    s
+
+ eka.txt    | 3 +--
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 5dbbe14e0898384cf048bf7fc00d1b0d9d5e8eeb
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Tue Mar 17 12:25:53 2020 +0200
+
+    uudelleennimeys
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f76dfbfd0a4a8bdf3aa91074558c9d613773ebb8
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Tue Mar 17 12:22:21 2020 +0200
+
+    Aa
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f9e29b98074b4c3e249330b788d38f4c36709550
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Mon Mar 16 13:53:32 2020 +0200
+
+    muutos
+
+ tiedosto.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 77dade14ab165e92c73eddea2770181cffe98890
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Mon Mar 16 13:52:50 2020 +0200
+
+    tekstiä lisää
+
+ tiedosto.txt | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+commit 448c151bf395bbf2cd9f42502e8f98dd9b0604ce
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Mon Mar 16 13:41:51 2020 +0200
+
+    uusi tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 45d9e741572d3aaeb09ad916eb31f368c0089d94
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Mon Mar 16 13:37:56 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 96d0cc7dfa538264109098ecf02dab59e064a8b0
+Author: Sini <saasini@ad.helsinki.fi>
+Date:   Mon Mar 16 13:36:03 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
