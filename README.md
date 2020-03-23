@@ -9,3 +9,7 @@ Tänne päivitetään Helsingin yliopiston kevään 2020 **Ohjelmistotekniikan**
 [gitlog.txt](https://github.com/sinisaarinen/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 [komentorivi.txt](https://github.com/sinisaarinen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+## Harjoitustyöhön liittyvät dokumentit
+
+[Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)
