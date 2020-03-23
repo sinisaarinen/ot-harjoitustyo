@@ -13,3 +13,4 @@ Tänne päivitetään Helsingin yliopiston kevään 2020 **Ohjelmistotekniikan**
 ## Harjoitustyöhön liittyvät dokumentit
 
 [Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)
+[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
