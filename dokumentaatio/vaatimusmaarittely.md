@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jossa tarkoituksena on tarjota käyttäjälleen haastavaa viihdykettä. Pelin tarkoitus on läpäistä kenttä klikkaamatta miinoja.
+Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena on tarjota käyttäjälleen haastavaa viihdykettä. Pelin tarkoitus on läpäistä kenttä klikkaamatta miinoja.
 
 ## Suunnitellut toiminnallisuudet (perusversio)
 
