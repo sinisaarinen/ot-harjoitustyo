@@ -16,3 +16,5 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 
 - peliin voi toteuttaa kaksinpelimahdollisuuden
 - pelissä voi valita eri vaikeustasoista
+- kirjautumismahdollisuus
+- ranking-lista haastavuustason ja ajan perusteella
