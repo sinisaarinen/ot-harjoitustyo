@@ -10,14 +10,11 @@ import minesweeperapp.ui.MinesweeperUi;
  *
  * @author saasini
  */
-
 public class Main {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         MinesweeperUi.main(args);
-    }
-    
+    } 
 }
