@@ -6,6 +6,7 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 
 ## Suunnitellut toiminnallisuudet (perusversio)
 
+- käyttäjän tulee kirjautua sovellukseen salasanan avulla
 - käyttäjä voi aloittaa uuden pelin
   - jos aiempi peli on kesken, kysytään käyttäjältä varmistus
 - käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (1-8)
@@ -16,5 +17,5 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 
 - peliin voi toteuttaa kaksinpelimahdollisuuden
 - pelissä voi valita eri vaikeustasoista
-- kirjautumismahdollisuus
+- pelissä mitataan aikaa
 - ranking-lista haastavuustason ja ajan perusteella
