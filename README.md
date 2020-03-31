@@ -1,19 +1,13 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Miinaharava
 
-## Tehtävät
+Sovellus on yhdelle pelaajalle tarkoitettu miinaharavapeli, jossa tarkoitus on päästä peli läpi klikkaamatta miinoja. Sovellus on vielä alkutekijöissään ja sitä tullaan päivittämään viikoittain. Tutustustumalla tarkemmin sovelluksen dokumentaatioon voi seurata, mitä ominaisuuksia sovellukseen tullaan tulevaisuudessa lisäämään. 
 
-Tänne päivitetään Helsingin yliopiston kevään 2020 **Ohjelmistotekniikan** kurssin harjoitustyötä viikoittain.
+Sovellus toimii Helsingin yliopiston kevään 2020 ohjelmistotekniikan kurssin harjoitustyönä.
 
-### Viikko 1
+HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
 
-[gitlog.txt](https://github.com/sinisaarinen/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/sinisaarinen/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-## Harjoitustyöhön liittyvät dokumentit
+## Dokumentaatio
 
 [Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
-
-HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
