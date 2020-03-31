@@ -15,3 +15,5 @@ Tänne päivitetään Helsingin yliopiston kevään 2020 **Ohjelmistotekniikan**
 [Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+
+HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
