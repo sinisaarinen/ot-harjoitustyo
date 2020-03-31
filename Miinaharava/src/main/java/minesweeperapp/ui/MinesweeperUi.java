@@ -16,6 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
+import javax.swing.SwingUtilities;
 /**
  *
  * @author saasini
@@ -40,11 +41,11 @@ public class MinesweeperUi extends Application {
         firstlayout.add(loginbutton, 0, 2);
         firstlayout.add(errormessage, 0, 3);
 
-        firstlayout.setPrefSize(300, 180);
-        firstlayout.setAlignment(Pos.CENTER);
-        firstlayout.setVgap(10);
-        firstlayout.setHgap(10);
-        firstlayout.setPadding(new Insets(20, 20, 20, 20));
+        firstlayout.setPrefSize(320, 200);
+        firstlayout.setAlignment(Pos.BOTTOM_CENTER);
+        firstlayout.setVgap(15);
+        firstlayout.setHgap(15);
+        firstlayout.setPadding(new Insets(25, 25, 25, 25));
 
         Scene passwordscene = new Scene(firstlayout);
         
