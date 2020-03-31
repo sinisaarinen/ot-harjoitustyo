@@ -32,4 +32,3 @@ Testikattavuusraportti luodaan komennolla
 ```
 mvn test jacoco:report
 ```
-Raporttia voi tarkastella selaimella osoitteessa target/site/jacoco/index.html
