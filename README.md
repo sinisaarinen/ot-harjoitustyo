@@ -11,3 +11,25 @@ HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
 [Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+
+## Komentorivitoiminnot
+
+Projektin koodin voi suorittaa komennolla
+```
+mvn compile exec:java -Dexec.mainClass=minesweeperapp.main.Main
+```
+
+### Testaus
+
+Testit suoritetaan komennolla 
+
+```
+mvn test
+```
+
+Testikattavuusraportti luodaan komennolla
+
+```
+mvn test jacoco:report
+```
+Raporttia voi tarkastella selaimella osoitteessa target/site/jacoco/index.html
