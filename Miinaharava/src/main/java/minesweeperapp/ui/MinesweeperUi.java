@@ -17,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javax.swing.SwingUtilities;
+import minesweeperapp.logic.ApplicationLogic;
 /**
  *
  * @author saasini
@@ -27,6 +28,9 @@ public class MinesweeperUi extends Application {
     
     @Override
     public void start(Stage window) throws Exception {
+        
+        ApplicationLogic applicationlogic = new ApplicationLogic();
+        
         //Log in view
 
         Label instr = new Label("Log in to begin");
@@ -72,7 +76,7 @@ public class MinesweeperUi extends Application {
         Scene gamescene = new Scene(layout);
         
         loginbutton.setOnAction((event) -> {
-          if (!passwordfield.getText().trim().equals("password")) {
+          if (applicationlogic.passwordCorrect(passwordfield.getText().trim())==false) {
               errormessage.setText("Wrong password!");
               return;
           }
