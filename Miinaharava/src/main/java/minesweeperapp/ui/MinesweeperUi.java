@@ -6,10 +6,13 @@
 package minesweeperapp.ui;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -23,11 +26,34 @@ public class MinesweeperUi extends Application {
     
     @Override
     public void start(Stage window) throws Exception {
+        //Log in view
+
+        Label instr = new Label("Log in to begin");
+        PasswordField passwordfield = new PasswordField();
+        Button loginbutton = new Button("Login");
+        Label errormessage = new Label("");
+
+        GridPane firstlayout = new GridPane();
+
+        firstlayout.add(instr, 0, 0);
+        firstlayout.add(passwordfield, 0, 1);
+        firstlayout.add(loginbutton, 0, 2);
+        firstlayout.add(errormessage, 0, 3);
+
+        firstlayout.setPrefSize(300, 180);
+        firstlayout.setAlignment(Pos.CENTER);
+        firstlayout.setVgap(10);
+        firstlayout.setHgap(10);
+        firstlayout.setPadding(new Insets(20, 20, 20, 20));
+
+        Scene passwordscene = new Scene(firstlayout);
+        
+        //Game view
         window.setTitle("Minesweeper");
     
         BorderPane layout = new BorderPane();
 
-        Label text = new Label("Do not click the bombs");
+        Label text = new Label("Do not click on the bombs");
         layout.setTop(text);
         GridPane grid = new GridPane();
         int i = 0;
@@ -42,8 +68,18 @@ public class MinesweeperUi extends Application {
         layout.setCenter(grid);
         
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
+        Scene gamescene = new Scene(layout);
+        
+        loginbutton.setOnAction((event) -> {
+          if (!passwordfield.getText().trim().equals("password")) {
+              errormessage.setText("Wrong password!");
+              return;
+          }
+
+        window.setScene(gamescene);
+      });
+
+      window.setScene(passwordscene);
         window.show();
 
     }
