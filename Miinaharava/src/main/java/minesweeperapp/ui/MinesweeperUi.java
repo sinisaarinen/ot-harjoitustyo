@@ -18,13 +18,14 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javax.swing.SwingUtilities;
 import minesweeperapp.logic.ApplicationLogic;
+import minesweeperapp.logic.Tile;
 /**
  *
  * @author saasini
  */
 public class MinesweeperUi extends Application {
     
-    private Button[] tiles = new Button[625];
+    private Tile[][] tiles = new Tile[26][26];
     
     @Override
     public void start(Stage window) throws Exception {
@@ -64,14 +65,13 @@ public class MinesweeperUi extends Application {
         int i = 0;
         for (int x = 1; x <= 25; x++) {
             for (int y = 1; y <= 25; y++) {
-                tiles[i] = new Button(" ");
-                    tiles[i].setFont(Font.font("Monospaced", 10));
-                    grid.add(tiles[i], x, y);                   
-                    i++;
+                Tile tile = new Tile(x, y, Math.random()<0.2);
+                tile.setFont(Font.font("Monospaced", 10));
+                tiles[x][y]=tile;
+                grid.add(tiles[x][y], x, y);
             }
         }
         layout.setCenter(grid);
-        
 
         Scene gamescene = new Scene(layout);
         
