@@ -31,6 +31,10 @@ public class Tile extends Button {
         
         setOnMouseClicked(e -> openTile());
     }
+    
+    public boolean containsBomb() {
+        return containsBomb;
+    }
 
     public void openTile() {
         if (isRevealed==true) {
