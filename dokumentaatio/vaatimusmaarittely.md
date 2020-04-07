@@ -6,12 +6,13 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 
 ## Suunnitellut toiminnallisuudet (perusversio)
 
-- käyttäjän tulee kirjautua sovellukseen salasanan avulla
+- käyttäjän tulee kirjautua sovellukseen salasanan avulla (tehty)
 - käyttäjä voi aloittaa uuden pelin
   - jos aiempi peli on kesken, kysytään käyttäjältä varmistus
 - käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (1-8)
+  - tällä hetkellä jos ruudussa on miina, tulostuu terminaaliin "Game over" -ilmoitus (tehty)
 - käyttäjä voi merkitä miinoja
-- käyttäjä voi lopettaa pelin sulkemalla ikkunan
+- käyttäjä voi lopettaa pelin sulkemalla ikkunan (tehty)
 
 ## Jatkokehitysideoita
 
