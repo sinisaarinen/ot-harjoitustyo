@@ -37,13 +37,13 @@ public class Tile extends Button {
     }
 
     public void openTile() {
-        if (isRevealed==true) {
+        if (isRevealed == true) {
             return;
         }
-        if (containsBomb==true) {
+        if (containsBomb == true) {
             System.out.println("Game Over, sulje sovellus!");
         }
 
         isRevealed = true;
-        }
+    }
 }

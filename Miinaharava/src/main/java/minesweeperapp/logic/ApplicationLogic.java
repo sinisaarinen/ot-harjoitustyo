@@ -25,17 +25,17 @@ public class ApplicationLogic {
     boolean[][] revealed;
     
     public Boolean passwordCorrect(String password) {
-         if (password.equals("password")) {
-             return true;
+        if (password.equals("password")) {
+            return true;
         }
         return false;
     }
     
     public int findMinesNear(int x, int y) {
-        int minesNear=0;
-        for (int i=-1; i<=1; i++) {
-            for (int j=-1; j<=1; j++) {
-                minesNear=minesNear+mines[i+x][j+y];
+        int minesNear = 0;
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; j++) {
+                minesNear = minesNear + mines[i + x][j + y];
             }
         }
         return minesNear;
