@@ -5,7 +5,7 @@
  */
 import de.saxsys.javafx.test.JfxRunner;
 import minesweeperapp.logic.ApplicationLogic;
-import minesweeperapp.logic.Tile;
+import minesweeperapp.model.Tile;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

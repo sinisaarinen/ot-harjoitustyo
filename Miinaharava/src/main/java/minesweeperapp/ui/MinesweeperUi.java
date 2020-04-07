@@ -18,7 +18,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javax.swing.SwingUtilities;
 import minesweeperapp.logic.ApplicationLogic;
-import minesweeperapp.logic.Tile;
+import minesweeperapp.model.Tile;
 /**
  *
  * @author saasini
