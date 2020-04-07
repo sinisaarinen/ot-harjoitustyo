@@ -1,1 +1,1 @@
-![](kaavio.jpg)
+![](kaavio_alustava.jpg)
