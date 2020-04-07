@@ -37,7 +37,7 @@ Kattavuusraporttia voi tarkastella avaamalla selaimella tiedoston target/site/ja
 
 ### Checkstyle
 
-Tiedoston [checkstyle.xml](Miinaharava/checkstyle.xml] määrittelemät tarkistukset suoritetaan komennolla
+Tiedoston [checkstyle.xml](Miinaharava/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla
 ```
 mvn jxr:jxr checkstyle:checkstyle
 ```
