@@ -34,7 +34,7 @@ Testikattavuusraportti luodaan komennolla
 ```
 mvn test jacoco:report
 ```
-Kattavuusraporttia voi tarkastella avaamalla selaimella tiedoston target/site/jacoco/index.html
+Kattavuusraporttia voi tarkastella avaamalla selaimella tiedoston _target/site/jacoco/index.html_
 
 ### Jar-tiedoston generointi
 
@@ -42,7 +42,7 @@ Jar-tiedosto generoidaan komennolla
 ```
 mvn package
 ```
-Suoritettava tiedosto Miinaharava-1.0-SNAPSHOT.jar löytyy tämän jälkeen hakemistosta target.
+Suoritettava tiedosto _Miinaharava-1.0-SNAPSHOT.jar_ löytyy tämän jälkeen hakemistosta _target_.
 
 ### Checkstyle
 
@@ -50,4 +50,4 @@ Tiedoston [checkstyle.xml](Miinaharava/checkstyle.xml) määrittelemät tarkistu
 ```
 mvn jxr:jxr checkstyle:checkstyle
 ```
-Virheilmoituksia voi tarkastella avaamalla selaimella tiedoston target/site/checkstyle.html
+Virheilmoituksia voi tarkastella avaamalla selaimella tiedoston _target/site/checkstyle.html_
