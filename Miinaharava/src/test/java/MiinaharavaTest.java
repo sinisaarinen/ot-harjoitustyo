@@ -7,7 +7,6 @@
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import minesweeperapp.logic.ApplicationLogic;
-import minesweeperapp.logic.Tile;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

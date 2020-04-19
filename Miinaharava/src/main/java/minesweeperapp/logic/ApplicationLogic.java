@@ -13,12 +13,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.layout.GridPane;
+import minesweeperapp.model.Minefield;
 
 /**
  *
  * @author saasini
  */
 public class ApplicationLogic {
+    public Minefield minefield;
+    
+    public ApplicationLogic() {
+        this.minefield = new Minefield();
+    }
     
     public Boolean passwordCorrect(String password) {
         if (password.equals("password")) {
