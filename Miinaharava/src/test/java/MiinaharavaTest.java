@@ -4,16 +4,17 @@
  * and open the template in the editor.
  */
 
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
+import de.saxsys.javafx.test.JfxRunner;
 import minesweeperapp.logic.ApplicationLogic;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.runner.RunWith;
 /**
  *
  * @author saasini
  */
+@RunWith(JfxRunner.class)
 public class MiinaharavaTest {
     
     ApplicationLogic applicationlogic;

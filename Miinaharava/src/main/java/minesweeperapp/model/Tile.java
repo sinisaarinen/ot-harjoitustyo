@@ -53,6 +53,9 @@ public class Tile extends Button {
     }
     
     public void setFlag() {
+        if (isRevealed == true) {
+            return;
+        }
         this.isFlagged = true;
         this.setText("F");
     }
@@ -67,7 +70,7 @@ public class Tile extends Button {
     }
 
     public void openTile() {
-        if (isRevealed == true) {
+        if (isRevealed == true || isFlagged() == true) {
             return;
         }
         if (containsBomb == true) {
