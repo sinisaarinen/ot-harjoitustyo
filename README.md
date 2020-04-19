@@ -36,6 +36,13 @@ mvn test jacoco:report
 ```
 Kattavuusraporttia voi tarkastella avaamalla selaimella tiedoston target/site/jacoco/index.html
 
+### Jar-tiedoston generointi
+
+Jar-tiedosto generoidaan komennolla
+```
+mvn package
+```
+Suoritettava tiedosto Miinaharava-1.0-SNAPSHOT.jar löytyy tämän jälkeen hakemistosta target.
 
 ### Checkstyle
 
