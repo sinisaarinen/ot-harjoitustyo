@@ -25,9 +25,9 @@ public class Minefield {
         int i = 0;
         for (int x = 1; x <= 25; x++) {
             for (int y = 1; y <= 25; y++) {
-                Tile tile = new Tile(x, y, Math.random()<0.2);
+                Tile tile = new Tile(x, y, Math.random() < 0.2);
                 tile.setFont(Font.font("Monospaced", 10));
-                tiles[x][y]=tile;
+                tiles[x][y] = tile;
                 grid.add(tiles[x][y], x, y);
             }
         }
