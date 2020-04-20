@@ -6,6 +6,7 @@
 import de.saxsys.javafx.test.JfxRunner;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
+import minesweeperapp.model.Minefield;
 import minesweeperapp.model.Tile;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,15 +21,16 @@ import org.junit.runner.RunWith;
 public class TileTest {
     
     Tile tile;
+    Minefield minefield;
     
     @Before
     public void setUp() {
-        tile = new Tile(2, 4, true);
+        minefield = new Minefield(26, 26);
+        tile = new Tile(2, 4, true, minefield);
     }
     
     @Test
     public void containsBombMethodReturnsTrueIfTileContainsBomb() {
-        tile.openTile();
         assertTrue(tile.containsBomb());
     }
     

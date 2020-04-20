@@ -48,6 +48,14 @@ public class Tile extends Button {
         });
     }
     
+    public int getX() {
+        return this.x;
+    }
+    
+    public int getY() {
+        return this.y;
+    }
+    
     public boolean containsBomb() {
         return containsBomb;
     }

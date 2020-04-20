@@ -66,7 +66,7 @@ public class Minefield {
         Tile tile = this.tiles[x][y];
         
         if (!tile.containsBomb()) {
-            tile.setText(""+findMinesNear(x, y));
+            tile.setText("" + findMinesNear(x, y));
             tile.setRevealed();
             openMinesNear(x, y);
         } else {
