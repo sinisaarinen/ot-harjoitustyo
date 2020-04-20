@@ -64,14 +64,17 @@ public class Minefield {
     
     public void openTile(int x, int y) {
         Tile tile = this.tiles[x][y];
-        
-        if (!tile.containsBomb()) {
-            tile.setText("" + findMinesNear(x, y));
-            tile.setRevealed();
-            openMinesNear(x, y);
-        } else {
+        if (tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
             tile.setText("X");
             revealAll();
+        } else if (!tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
+            if (findMinesNear(x, y)>0) {
+                tile.setText("" + findMinesNear(x, y));
+            } else {
+                tile.setText("0");
+            }
+            tile.setRevealed();
+            openMinesNear(x, y);
         }
     }
     

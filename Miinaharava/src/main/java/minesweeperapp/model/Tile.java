@@ -67,6 +67,10 @@ public class Tile extends Button {
         }
     }
     
+    public boolean isRevealed() {
+        return this.isRevealed;
+    }
+    
     public String setNumber(int number) {
         this.minesNear = "" + number;
         return this.minesNear;
