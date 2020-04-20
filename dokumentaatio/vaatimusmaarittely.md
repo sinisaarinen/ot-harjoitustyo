@@ -9,7 +9,7 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 - käyttäjän tulee kirjautua sovellukseen salasanan avulla (tehty)
 - käyttäjä voi aloittaa uuden pelin
   - jos aiempi peli on kesken, kysytään käyttäjältä varmistus
-- käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (1-8) (tehty)
+- käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (0-8) (tehty)
 - jos käyttäjä klikkaa miinaa, kaikki loputkin miinat paljastuvat ja peli loppuu (tehty)
 - käyttäjä voi merkitä miinoja (tehty)
 - käyttäjä voi lopettaa pelin sulkemalla ikkunan (tehty)
