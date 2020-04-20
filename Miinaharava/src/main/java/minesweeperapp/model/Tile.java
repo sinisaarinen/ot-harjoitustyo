@@ -7,6 +7,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
+import minesweeperapp.model.Minefield;
 
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
@@ -24,9 +25,11 @@ public class Tile extends Button {
     private String minesNear;
     private Minefield minefield;
 
-    public Tile(int x, int y, boolean containsBomb) {
+
+    public Tile(int x, int y, boolean containsBomb, Minefield minefield) {
         this.x = x;
         this.y = y;
+        this.minefield = minefield;
         this.containsBomb = containsBomb;
         this.isRevealed = false;
         this.isFlagged = false;
@@ -51,6 +54,9 @@ public class Tile extends Button {
     
     public void setRevealed() {
         this.isRevealed = true;
+        if (this.containsBomb == true) {
+            this.setText("X");
+        }
     }
     
     public String setNumber(int number) {

@@ -18,6 +18,7 @@ public class Minefield {
     private int width;
     private int height;
     private GridPane grid;
+    static Tile tile;
     
     public Minefield(int width, int height) {
         this.width = width;
@@ -45,7 +46,7 @@ public class Minefield {
         int i = 0;
         for (int x = 1; x < width; x++) {
             for (int y = 1; y < height; y++) {
-                Tile tile = new Tile(x, y, Math.random() < 0.2);
+                Tile tile = new Tile(x, y, Math.random() < 0.2, this);
                 tile.setFont(Font.font("Monospaced", 10));
                 tiles[x][y] = tile;
                 grid.add(tiles[x][y], x, y);
@@ -65,10 +66,11 @@ public class Minefield {
         Tile tile = this.tiles[x][y];
         
         if (!tile.containsBomb()) {
-            tile.setNumber(findMinesNear(x, y));
+            tile.setText(""+findMinesNear(x, y));
             tile.setRevealed();
             openMinesNear(x, y);
         } else {
+            tile.setText("X");
             revealAll();
         }
     }
@@ -118,8 +120,8 @@ public class Minefield {
     }
     
     public void revealAll() {
-        for (int i = 0; i < this.tiles.length; i++) {
-            for (int j = 0; j < this.tiles[0].length; j++) {
+        for (int i = 1; i < this.tiles.length; i++) {
+            for (int j = 1; j < this.tiles[0].length; j++) {
                 this.tiles[i][j].setRevealed();
             }
         }
