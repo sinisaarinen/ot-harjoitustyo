@@ -9,4 +9,6 @@ Päivä | Aika | Mitä tein
 6.4. | 2 h | Tile-luokan lisääminen ja toiminnallisuus
 7.4. | 2 h | Testien luominen, checkstylen käyttöönotto, viikon tavoitteisiin perehtyminen
 7.4. | 1,5 h | Alustavan pakkaus/luokkakaavion luominen ja viikon tavoitteiden viimeistely
-yht. | 12,5 h
+19.4. | 7 h | Napipainallustoimintojen kehittelyä, lisää testejä ja metodeja
+20.4. | 3 h | Napinpainallustoimintojen ja bugien korjailua
+yht. | 22,5 h
