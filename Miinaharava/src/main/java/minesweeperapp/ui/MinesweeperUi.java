@@ -65,9 +65,6 @@ public class MinesweeperUi extends Application {
 
         Label text = new Label("Do not click on the bombs");
         layout.setTop(text);
-        applicationlogic.minefield.getGrid().setOnMouseClicked((e) -> {
-            mouseClick(e, applicationlogic.minefield.getGrid(), applicationlogic);
-        });
         layout.setCenter(applicationlogic.minefield.getGrid());
         
         Scene gamescene = new Scene(layout);
@@ -87,21 +84,5 @@ public class MinesweeperUi extends Application {
     }
     public static void main(String[] args) {
         launch(MinesweeperUi.class);
-    }
-    
-    private void mouseClick(MouseEvent event, GridPane grid, ApplicationLogic logic) {
-        Tile[][] mineField = logic.minefield.getField();
-        System.out.println("toimii");
-        int x = (int) event.getX();
-        int y = (int) event.getY();
-        if ((event.getButton().equals(MouseButton.PRIMARY))) {
-                
-            logic.openTile(x, y);
-        }
-        
-        if ((event.getButton().equals(MouseButton.SECONDARY))) {
-            
-            logic.setFlag(x, y);
-        }       
     }
 }

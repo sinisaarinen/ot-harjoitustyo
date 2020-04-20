@@ -22,6 +22,7 @@ public class Tile extends Button {
     private boolean isRevealed = false;
     private boolean isFlagged;
     private String minesNear;
+    private Minefield minefield;
 
     public Tile(int x, int y, boolean containsBomb) {
         this.x = x;
@@ -30,6 +31,18 @@ public class Tile extends Button {
         this.isRevealed = false;
         this.isFlagged = false;
         this.setPrefSize(28, 28);
+        this.setOnMouseClicked(event -> {
+            if (event.getButton() == MouseButton.PRIMARY) {
+                minefield.openTile(x, y);
+            }
+            if (event.getButton() == MouseButton.SECONDARY) {
+                if (!isFlagged) {
+                    setFlag();
+                } else {
+                    removeFlag();
+                }
+            }
+        });
     }
     
     public boolean containsBomb() {
