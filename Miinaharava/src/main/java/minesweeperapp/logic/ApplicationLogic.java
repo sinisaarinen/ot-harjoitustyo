@@ -14,8 +14,16 @@ import minesweeperapp.model.Minefield;
 public class ApplicationLogic {
     public Minefield minefield;
     
-    public ApplicationLogic() {
-        this.minefield = new Minefield();
+    public ApplicationLogic(int width, int height) {
+        this.minefield = new Minefield(width, height);
+    }
+    
+    public void openTile(int x, int y) {
+        this.minefield.openTile(x, y);
+    }
+    
+    public void setFlag(int x, int y) {
+        this.minefield.setFlag(x, y);
     }
     
     public Boolean passwordCorrect(String password) {

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package minesweeperapp.model;
 
 import javafx.scene.control.Button;
@@ -25,6 +21,7 @@ public class Tile extends Button {
     private boolean containsBomb;
     private boolean isRevealed = false;
     private boolean isFlagged;
+    private String minesNear;
 
     public Tile(int x, int y, boolean containsBomb) {
         this.x = x;
@@ -33,23 +30,19 @@ public class Tile extends Button {
         this.isRevealed = false;
         this.isFlagged = false;
         this.setPrefSize(28, 28);
-        
-        this.setOnMouseClicked(e -> {
-            if (e.getButton() == MouseButton.PRIMARY) {
-                openTile();
-            }
-            if (e.getButton() == MouseButton.SECONDARY) {
-                if (!isFlagged) {
-                    setFlag();
-                } else {
-                    removeFlag();
-                }
-            }
-        });
     }
     
     public boolean containsBomb() {
         return containsBomb;
+    }
+    
+    public void setRevealed() {
+        this.isRevealed = true;
+    }
+    
+    public String setNumber(int number) {
+        this.minesNear = "" + number;
+        return this.minesNear;
     }
     
     public void setFlag() {
@@ -67,20 +60,5 @@ public class Tile extends Button {
     
     public boolean isFlagged() {
         return isFlagged;
-    }
-
-    public void openTile() {
-        if (isRevealed == true || isFlagged() == true) {
-            return;
-        }
-        if (containsBomb == true) {
-            this.setText("X");
-            System.out.println("Game Over, sulje sovellus!");
-        }
-        if (containsBomb == false) {
-            this.setText("O");
-        }
-
-        isRevealed = true;
     }
 }

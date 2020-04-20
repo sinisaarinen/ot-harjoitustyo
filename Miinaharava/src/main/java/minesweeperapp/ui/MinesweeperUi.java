@@ -6,6 +6,7 @@
 package minesweeperapp.ui;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -13,11 +14,11 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
-import javax.swing.SwingUtilities;
 import minesweeperapp.logic.ApplicationLogic;
 import minesweeperapp.model.Minefield;
 import minesweeperapp.model.Tile;
@@ -27,10 +28,13 @@ import minesweeperapp.model.Tile;
  */
 public class MinesweeperUi extends Application {
     
+    private ApplicationLogic applicationlogic;
+    private GridPane gridpane;
+    
     @Override
     public void start(Stage window) throws Exception {
         
-        ApplicationLogic applicationlogic = new ApplicationLogic();
+        applicationlogic = new ApplicationLogic(26, 26);
         
         //Log in view
 
@@ -61,13 +65,15 @@ public class MinesweeperUi extends Application {
 
         Label text = new Label("Do not click on the bombs");
         layout.setTop(text);
-        Minefield minefield = new Minefield();
-        layout.setCenter(minefield.getGrid());
-
+        applicationlogic.minefield.getGrid().setOnMouseClicked((e) -> {
+            mouseClick(e, applicationlogic.minefield.getGrid(), applicationlogic);
+        });
+        layout.setCenter(applicationlogic.minefield.getGrid());
+        
         Scene gamescene = new Scene(layout);
         
         loginbutton.setOnAction((event) -> {
-          if (applicationlogic.passwordCorrect(passwordfield.getText().trim())==false) {
+          if (applicationlogic.passwordCorrect(passwordfield.getText().trim()) == false) {
               errormessage.setText("Wrong password!");
               return;
           }
@@ -81,5 +87,21 @@ public class MinesweeperUi extends Application {
     }
     public static void main(String[] args) {
         launch(MinesweeperUi.class);
+    }
+    
+    private void mouseClick(MouseEvent event, GridPane grid, ApplicationLogic logic) {
+        Tile[][] mineField = logic.minefield.getField();
+        System.out.println("toimii");
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+        if ((event.getButton().equals(MouseButton.PRIMARY))) {
+                
+            logic.openTile(x, y);
+        }
+        
+        if ((event.getButton().equals(MouseButton.SECONDARY))) {
+            
+            logic.setFlag(x, y);
+        }       
     }
 }
