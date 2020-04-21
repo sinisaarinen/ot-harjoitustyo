@@ -16,4 +16,6 @@ Sovelluksen toimintalogiikan päätoiminnollisuuksien sekvenssikaaviot:
 
 #### Uuden pelin aloittaminen
 
+Huom.! Uuden pelin aloittamista ei ole vielä toteutettu - uusi peli käynnistyy tällä hetkellä, kun sovellukseen kirjaudutaan sisään. Toiminto lisätään lähitulevaisuudessa.
+
 ![](sekvenssikaavio_uusipeli.png)
