@@ -12,6 +12,7 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 - käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (0-8) (tehty)
 - jos käyttäjä klikkaa miinaa, kaikki loputkin miinat paljastuvat ja peli loppuu (tehty)
 - käyttäjä voi merkitä miinoja hiiren oikealla painikkeella (tehty)
+- käyttäjä voi poistaa merkityn miinan klikkaamalla merkittyä ruutua uudelleen hiiren oikealla painikkeella (tehty)
 - käyttäjä voi lopettaa pelin sulkemalla ikkunan (tehty)
 
 ## Jatkokehitysideoita
