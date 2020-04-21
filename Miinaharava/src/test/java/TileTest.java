@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 import de.saxsys.javafx.test.JfxRunner;
-import javafx.event.EventHandler;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import minesweeperapp.model.Minefield;
 import minesweeperapp.model.Tile;
@@ -30,6 +30,16 @@ public class TileTest {
     }
     
     @Test
+    public void getXMethodReturnsCorrectValue() {
+        assertEquals(2, tile.getX());
+    }
+    
+    @Test
+    public void getYMethodReturnsCorrectValue() {
+        assertEquals(4, tile.getY());
+    }
+    
+    @Test
     public void containsBombMethodReturnsTrueIfTileContainsBomb() {
         assertTrue(tile.containsBomb());
     }
@@ -47,6 +57,13 @@ public class TileTest {
     }
     
     @Test
+    public void setFlagMethodDoesNothingIfTileIsRevealed() {
+        tile.setRevealed();
+        tile.setFlag();
+        assertFalse(tile.isFlagged());
+    }
+    
+    @Test
     public void unopenedTileHasNoText() {
         assertEquals("", tile.getText());
     }
@@ -61,5 +78,18 @@ public class TileTest {
     public void removeFlagMethodChangesBooleanValue() {
         tile.removeFlag();
         assertFalse(tile.isFlagged());
+    }
+    
+    @Test
+    public void isRevealedMethodReturnsCorrectValue() {
+        tile.setRevealed();
+        assertTrue(tile.isRevealed());
+    }
+    
+    @Test
+    public void setRevealedMethodWritesXOnATileWithMine() {
+        tile.setRevealed();
+        assertTrue(tile.containsBomb());
+        assertEquals("X", tile.getTextOnTile());
     }
 }

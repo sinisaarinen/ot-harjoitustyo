@@ -2,14 +2,6 @@
 package minesweeperapp.model;
 
 import javafx.scene.control.Button;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Font;
-import minesweeperapp.model.Minefield;
-
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 
 /**
@@ -67,13 +59,12 @@ public class Tile extends Button {
         }
     }
     
-    public boolean isRevealed() {
-        return this.isRevealed;
+    public String getTextOnTile() {
+        return this.getText();
     }
     
-    public String setNumber(int number) {
-        this.minesNear = "" + number;
-        return this.minesNear;
+    public boolean isRevealed() {
+        return this.isRevealed;
     }
     
     public void setFlag() {

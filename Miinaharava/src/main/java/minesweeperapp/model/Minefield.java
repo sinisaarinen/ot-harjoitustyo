@@ -35,11 +35,6 @@ public class Minefield {
         return this.height;
     }
     
-    public Tile getTile(int x, int y) {
-        Tile tile = this.tiles[x][y];
-        return tile;
-    }
-    
     public void constructField() {
         this.tiles = new Tile[this.width][this.height];
         grid = new GridPane();
@@ -98,23 +93,6 @@ public class Minefield {
             }
         }
         return minesNear;
-    }
-    
-    public void openMinesNear(int x, int y) {
-        //ei toimi vielä
-        int xMin = Math.max(0, x - 1);
-        int xMax = Math.min(this.width - 1, x + 1);
-        int yMin = Math.max(0, y - 1);
-        int yMax = Math.min(this.height - 1, y + 1);
-        
-        for (int i = xMin; i <= xMax; i++) {
-            for (int j = yMin; j <= yMax; j++) {            
-                if (!this.tiles[i][j].containsBomb()) { 
-                    this.tiles[i][j].setRevealed();
-                    this.tiles[i][j].setNumber(findMinesNear(i, j));                             
-                }
-            }                
-        }
     }
     
     public void revealAll() {
