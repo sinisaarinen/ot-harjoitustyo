@@ -16,7 +16,7 @@ HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
 
 ## Releaset
 
-[Viikko 5](releases/tag/viikko5)
+[Viikko 5](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Komentorivitoiminnot
 
