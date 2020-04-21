@@ -12,4 +12,8 @@ Sovelluksen toimintalogiikan päätoiminnollisuuksien sekvenssikaaviot:
 
 #### Kirjautuminen
 
-![](sekvenssikaavio_kirjautuminen.jpg)
+![](sekvenssikaavio_kirjautuminen.png)
+
+#### Uuden pelin aloittaminen
+
+![](sekvenssikaavio_uusipeli.png)
