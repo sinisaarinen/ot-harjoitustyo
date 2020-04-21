@@ -11,4 +11,5 @@ Päivä | Aika | Mitä tein
 7.4. | 1,5 h | Alustavan pakkaus/luokkakaavion luominen ja viikon tavoitteiden viimeistely
 19.4. | 7 h | Napipainallustoimintojen kehittelyä, lisää testejä ja metodeja
 20.4. | 3 h | Napinpainallustoimintojen ja bugien korjailua
-yht. | 22,5 h
+21.4. | 4 h | Koodin siistimistä, sekvenssikaavioiden laatimista, dokumentaation päivittelyä, lisää testejä
+yht. | 26,5 h
