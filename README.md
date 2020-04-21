@@ -43,7 +43,8 @@ Jar-tiedosto generoidaan komennolla
 mvn package
 ```
 Suoritettava tiedosto _Miinaharava-1.0-SNAPSHOT.jar_ löytyy tämän jälkeen hakemistosta _target_, ja sen voi suorittaa komennolla
-```java -jar Miinaharava-1.0-SNAPSHOT.jar
+```
+java -jar Miinaharava-1.0-SNAPSHOT.jar
 ```
 
 ### Checkstyle
