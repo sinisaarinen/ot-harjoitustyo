@@ -101,6 +101,7 @@ public class Minefield {
     }
     
     public void openMinesNear(int x, int y) {
+        //ei toimi vielä
         int xMin = Math.max(0, x - 1);
         int xMax = Math.min(this.width - 1, x + 1);
         int yMin = Math.max(0, y - 1);
