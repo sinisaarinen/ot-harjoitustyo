@@ -12,4 +12,4 @@ Sovelluksen toimintalogiikan päätoiminnollisuuksien sekvenssikaaviot:
 
 #### Kirjautuminen
 
-![](sekvenssikaavio_kirjautuminen.png)
+![](sekvenssikaavio_kirjautuminen.jpg)
