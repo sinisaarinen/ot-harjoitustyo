@@ -14,6 +14,10 @@ HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
 
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 
+## Releaset
+
+[Viikko 5](releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 
 Projektin koodin voi suorittaa komennolla
