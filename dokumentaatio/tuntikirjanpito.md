@@ -12,4 +12,5 @@ Päivä | Aika | Mitä tein
 19.4. | 7 h | Napipainallustoimintojen kehittelyä, lisää testejä ja metodeja
 20.4. | 3 h | Napinpainallustoimintojen ja bugien korjailua
 21.4. | 4 h | Koodin siistimistä, sekvenssikaavioiden laatimista, dokumentaation päivittelyä, lisää testejä
-yht. | 26,5 h
+27.4. | 2 h | Lisättiin mahdollisuus valita vaikeustaso
+yht. | 28,5 h
