@@ -7,6 +7,7 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 ## Suunnitellut toiminnallisuudet (perusversio)
 
 - käyttäjän tulee kirjautua sovellukseen salasanan avulla (tehty)
+- käyttäjä voi valita eri vaikeustasoista (helppo/normaali/vaikea) (tehty)
 - käyttäjä voi aloittaa uuden pelin
   - jos aiempi peli on kesken, kysytään käyttäjältä varmistus
 - käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (0-8) (tehty)
@@ -18,6 +19,5 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 ## Jatkokehitysideoita
 
 - peliin voi toteuttaa kaksinpelimahdollisuuden
-- pelissä voi valita eri vaikeustasoista
 - pelissä mitataan aikaa
 - ranking-lista haastavuustason ja ajan perusteella
