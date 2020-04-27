@@ -5,6 +5,10 @@
  */
 package minesweeperapp.model;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import minesweeperapp.logic.ApplicationLogic;
@@ -73,7 +77,7 @@ public class Minefield {
         if (tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
             tile.setText("X");
             revealAll();
-            System.out.println("GAME OVER!");
+            gameOver();
         } else if (!tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
             if (findMinesNear(x, y) > 0) {
                 tile.setText("" + findMinesNear(x, y));
@@ -96,8 +100,24 @@ public class Minefield {
             }
         }
         if (cleared == this.width * this.height) {
-            System.out.println("YOU WIN!");
+            victory();
         }
+    }
+    
+    public void gameOver() {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("GAME OVER!");
+        alert.setHeaderText(null);
+        alert.setContentText("Click New game to try again!");
+        alert.showAndWait();
+    }
+    
+    public void victory() {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("YOU WIN!");
+        alert.setHeaderText(null);
+        alert.setContentText("Click New game to try again!");
+        alert.showAndWait();
     }
        
     public void setFlag(int x, int y) {
