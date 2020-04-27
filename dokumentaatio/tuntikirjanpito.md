@@ -12,5 +12,6 @@ Päivä | Aika | Mitä tein
 19.4. | 7 h | Napipainallustoimintojen kehittelyä, lisää testejä ja metodeja
 20.4. | 3 h | Napinpainallustoimintojen ja bugien korjailua
 21.4. | 4 h | Koodin siistimistä, sekvenssikaavioiden laatimista, dokumentaation päivittelyä, lisää testejä
-27.4. | 2 h | Lisättiin mahdollisuus valita vaikeustaso
+27.4. | 2 h | Lisättiin uusi näkymä, jossa mahdollisuus valita vaikeustaso
+27.4. | 3 h | Lisättiin vaikeustasoille eri kokoiset kentät ja uuden pelin aloitusmahdollisuus, päivitettiin dokumentaatiota
 yht. | 28,5 h
