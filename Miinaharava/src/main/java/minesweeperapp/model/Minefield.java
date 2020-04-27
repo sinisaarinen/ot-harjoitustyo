@@ -7,6 +7,7 @@ package minesweeperapp.model;
 
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
+import minesweeperapp.logic.ApplicationLogic;
 
 /**
  *
@@ -20,10 +21,12 @@ public class Minefield {
     private double minePercentage;
     private GridPane grid;
     static Tile tile;
+    public ApplicationLogic applicationlogic;
     
     public Minefield(int width, int height, String difficulty) {
         this.width = width;
         this.height = height;
+        this.applicationlogic = applicationlogic;
         
         constructField(difficulty);
     }
@@ -70,6 +73,7 @@ public class Minefield {
         if (tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
             tile.setText("X");
             revealAll();
+            System.out.println("GAME OVER!");
         } else if (!tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
             if (findMinesNear(x, y) > 0) {
                 tile.setText("" + findMinesNear(x, y));
@@ -77,10 +81,25 @@ public class Minefield {
                 tile.setText("0");
             }
             tile.setRevealed();
-            
+            checkGameStatus();
         }
     }
     
+    public void checkGameStatus() {
+        int cleared = 0;
+        for (int i=0; i<this.width; i++) {
+            for (int j=0; j<this.height; j++) {
+                Tile tile = this.tiles[i][j];
+                if (tile.isRevealed() || tile.containsBomb()) {
+                    cleared++;
+                }
+            }
+        }
+        if (cleared == this.width * this.height) {
+            System.out.println("YOU WIN!");
+        }
+    }
+       
     public void setFlag(int x, int y) {
         Tile tile = this.tiles[x][y];
         

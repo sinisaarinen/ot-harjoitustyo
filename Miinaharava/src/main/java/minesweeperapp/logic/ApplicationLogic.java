@@ -14,6 +14,8 @@ import minesweeperapp.model.Minefield;
 public class ApplicationLogic {
     public Minefield minefield;
     private String difficulty;
+    public Boolean lost;
+    public Boolean victory;
     
     public ApplicationLogic(int width, int height, String difficulty) {
         this.minefield = new Minefield(width, height, difficulty);
@@ -44,5 +46,14 @@ public class ApplicationLogic {
             return true;
         }
         return false;
+    }
+    
+    public void victory() {
+        this.victory = true;
+    }
+    
+    public void gameOver() {
+        this.lost = true;
+        System.out.println("GAME OVER!");
     }
 }
