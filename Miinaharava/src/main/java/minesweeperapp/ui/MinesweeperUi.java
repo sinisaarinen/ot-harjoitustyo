@@ -62,7 +62,7 @@ public class MinesweeperUi extends Application {
         Button normal = new Button("Normal");
         Button hard = new Button("Hard");
         Button startButton = new Button("Start");
-        
+
         HBox levelHBox = new HBox();
         levelHBox.setSpacing(20);
         levelHBox.getChildren().add(easy);
@@ -97,6 +97,8 @@ public class MinesweeperUi extends Application {
         
         Scene gamescene = new Scene(layout);
         
+        
+        //Buttons set on action
         loginbutton.setOnAction((event) -> {
           if (applicationlogic.passwordCorrect(passwordfield.getText().trim()) == false) {
               errormessage.setText("Wrong password!");
@@ -104,10 +106,11 @@ public class MinesweeperUi extends Application {
           }
 
         window.setScene(levelScene);
-      });
+        
+        });
         
         easy.setOnAction((event) -> {
-            applicationlogic = new ApplicationLogic(26, 26, "easy");
+            applicationlogic = new ApplicationLogic(10, 10, "easy");
             applicationlogic.setEasy();
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Easy");
@@ -115,7 +118,7 @@ public class MinesweeperUi extends Application {
         });
                
         normal.setOnAction((event) -> {
-            applicationlogic = new ApplicationLogic(26, 26, "normal");
+            applicationlogic = new ApplicationLogic(18, 18, "normal");
             applicationlogic.setNormal();
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Normal");
