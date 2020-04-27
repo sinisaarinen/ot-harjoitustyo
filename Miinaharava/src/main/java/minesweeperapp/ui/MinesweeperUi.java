@@ -33,7 +33,6 @@ public class MinesweeperUi extends Application {
         applicationlogic = new ApplicationLogic(26, 26, "easy");
         
         //Log in view
-
         Label instr = new Label("Log in to begin");
         PasswordField passwordfield = new PasswordField();
         Button loginbutton = new Button("Login");
@@ -77,9 +76,9 @@ public class MinesweeperUi extends Application {
         selectLevel.getChildren().add(startButton);
         
         levelPane.setTop(levelTitle);
-        levelPane.setCenter(selectLevel);
+        levelPane.setBottom(selectLevel);
         
-        levelPane.setPrefSize(500, 400);
+        levelPane.setPrefSize(320, 200);
         BorderPane.setMargin(levelTitle, new Insets(10, 10, 10, 50));
         BorderPane.setMargin(selectLevel, new Insets(100, 10, 10, 10));
         
