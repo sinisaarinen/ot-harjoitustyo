@@ -17,14 +17,15 @@ public class Minefield {
     private Tile[][] tiles;
     private int width;
     private int height;
+    private double minePercentage;
     private GridPane grid;
     static Tile tile;
     
-    public Minefield(int width, int height) {
+    public Minefield(int width, int height, String difficulty) {
         this.width = width;
         this.height = height;
         
-        constructField();
+        constructField(difficulty);
     }
     
     public int getWidth() {
@@ -35,13 +36,20 @@ public class Minefield {
         return this.height;
     }
     
-    public void constructField() {
+    public void constructField(String difficulty) {
         this.tiles = new Tile[this.width][this.height];
         grid = new GridPane();
         int i = 0;
+        if (difficulty.equals("easy")) {
+            this.minePercentage = 0.1;
+        } else if (difficulty.equals("normal")) {
+            this.minePercentage = 0.2;
+        } else if (difficulty.equals("hard")) {
+            this.minePercentage = 0.3;
+        }
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                Tile tile = new Tile(x, y, Math.random() < 0.2, this);
+                Tile tile = new Tile(x, y, Math.random() < minePercentage, this);
                 tile.setFont(Font.font("Monospaced", 10));
                 tiles[x][y] = tile;
                 grid.add(tiles[x][y], x, y);

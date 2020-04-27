@@ -21,7 +21,7 @@ public class MiinaharavaTest {
     
     @Before
     public void setUp() {
-        applicationlogic = new ApplicationLogic(26, 26);
+        applicationlogic = new ApplicationLogic(26, 26, "easy");
     }
     
     @Test

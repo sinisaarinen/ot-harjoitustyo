@@ -13,9 +13,22 @@ import minesweeperapp.model.Minefield;
  */
 public class ApplicationLogic {
     public Minefield minefield;
+    private String difficulty;
     
-    public ApplicationLogic(int width, int height) {
-        this.minefield = new Minefield(width, height);
+    public ApplicationLogic(int width, int height, String difficulty) {
+        this.minefield = new Minefield(width, height, difficulty);
+    }
+    
+    public void setEasy() {
+        this.difficulty = "easy";
+    }
+    
+    public void setNormal() {
+        this.difficulty = "normal";
+    }
+    
+    public void setHard() {
+        this.difficulty = "hard";
     }
     
     public void openTile(int x, int y) {

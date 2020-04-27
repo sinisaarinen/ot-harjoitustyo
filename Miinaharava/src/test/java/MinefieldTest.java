@@ -27,7 +27,7 @@ public class MinefieldTest {
     
     @Before
     public void setUp() {
-        minefield = new Minefield(26, 26);
+        minefield = new Minefield(26, 26, "easy");
         tile = new Tile(2, 4, true, minefield);
     }
     

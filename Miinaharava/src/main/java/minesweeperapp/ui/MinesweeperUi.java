@@ -15,6 +15,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import minesweeperapp.logic.ApplicationLogic;
 /**
  *
@@ -28,7 +30,7 @@ public class MinesweeperUi extends Application {
     @Override
     public void start(Stage window) throws Exception {
         
-        applicationlogic = new ApplicationLogic(26, 26);
+        applicationlogic = new ApplicationLogic(26, 26, "easy");
         
         //Log in view
 
@@ -52,6 +54,40 @@ public class MinesweeperUi extends Application {
 
         Scene passwordscene = new Scene(firstlayout);
         
+        //Level view
+        BorderPane levelPane = new BorderPane();
+        Label levelTitle = new Label("Welcome to play Minesweeper!");
+        
+        Label levelInstr = new Label("Choose difficulty");
+        Button easy = new Button("Easy");
+        Button normal = new Button("Normal");
+        Button hard = new Button("Hard");
+        Button startButton = new Button("Start");
+        
+        HBox levelHBox = new HBox();
+        levelHBox.setSpacing(20);
+        levelHBox.getChildren().add(easy);
+        levelHBox.getChildren().add(normal);
+        levelHBox.getChildren().add(hard);
+        
+        VBox selectLevel = new VBox();
+        selectLevel.setSpacing(20);
+        selectLevel.getChildren().add(levelInstr);
+        selectLevel.getChildren().add(levelHBox);
+        selectLevel.getChildren().add(startButton);
+        
+        levelPane.setTop(levelTitle);
+        levelPane.setCenter(selectLevel);
+        
+        levelPane.setPrefSize(500, 400);
+        BorderPane.setMargin(levelTitle, new Insets(10, 10, 10, 50));
+        BorderPane.setMargin(selectLevel, new Insets(100, 10, 10, 10));
+        
+        Scene levelScene = new Scene(levelPane); 
+
+        window.setScene(passwordscene);
+        window.show();
+                
         //Game view
         window.setTitle("Minesweeper");
     
@@ -59,7 +95,6 @@ public class MinesweeperUi extends Application {
 
         Label text = new Label("Do not click on the bombs");
         layout.setTop(text);
-        layout.setCenter(applicationlogic.minefield.getGrid());
         
         Scene gamescene = new Scene(layout);
         
@@ -69,12 +104,37 @@ public class MinesweeperUi extends Application {
               return;
           }
 
-        window.setScene(gamescene);
+        window.setScene(levelScene);
       });
-
-      window.setScene(passwordscene);
-        window.show();
-
+        
+        easy.setOnAction((event) -> {
+            applicationlogic = new ApplicationLogic(26, 26, "easy");
+            applicationlogic.setEasy();
+            layout.setCenter(applicationlogic.minefield.getGrid());
+            levelInstr.setText("Difficulty chosen: Easy");
+              
+        });
+               
+        normal.setOnAction((event) -> {
+            applicationlogic = new ApplicationLogic(26, 26, "normal");
+            applicationlogic.setNormal();
+            layout.setCenter(applicationlogic.minefield.getGrid());
+            levelInstr.setText("Difficulty chosen: Normal");
+           
+        });
+        
+        hard.setOnAction((event) -> {
+            applicationlogic = new ApplicationLogic(26, 26, "hard");
+            applicationlogic.setHard();
+            layout.setCenter(applicationlogic.minefield.getGrid());
+            levelInstr.setText("Difficulty chosen: Hard");
+        });
+        
+        startButton.setOnAction((event) -> {
+            levelInstr.setText("Good luck!");
+            window.setScene(gamescene);
+            
+        });
     }
     public static void main(String[] args) {
         launch(MinesweeperUi.class);
