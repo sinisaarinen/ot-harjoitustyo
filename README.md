@@ -1,6 +1,6 @@
 # Miinaharava
 
-Sovellus on yhdelle pelaajalle tarkoitettu miinaharavapeli, jossa tarkoitus on päästä peli läpi klikkaamatta miinoja. Sovellus on vielä alkutekijöissään ja sitä tullaan päivittämään viikoittain. Tutustustumalla tarkemmin sovelluksen dokumentaatioon voi seurata, mitä ominaisuuksia sovellukseen tullaan tulevaisuudessa lisäämään. 
+Sovellus on yhdelle pelaajalle tarkoitettu miinaharavapeli, jossa tarkoitus on päästä peli läpi klikkaamatta miinoja. Sovellukseen kirjaudutaan sisään salasanan avulla, jonka jälkeen pelaaja pääsee valitsemaan vaikeustason ja aloittamaan pelin.
 
 Sovellus toimii Helsingin yliopiston kevään 2020 ohjelmistotekniikan kurssin harjoitustyönä.
 
