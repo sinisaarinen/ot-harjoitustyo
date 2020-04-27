@@ -92,8 +92,8 @@ public class MinesweeperUi extends Application {
     
         BorderPane layout = new BorderPane();
 
-        Label text = new Label("Do not click on the bombs");
-        layout.setTop(text);
+        Button newGameButton = new Button("New game");
+        layout.setTop(newGameButton);
         
         Scene gamescene = new Scene(layout);
         
@@ -132,6 +132,11 @@ public class MinesweeperUi extends Application {
         startButton.setOnAction((event) -> {
             levelInstr.setText("Good luck!");
             window.setScene(gamescene);
+            
+        });
+        
+        newGameButton.setOnAction((event) -> {
+            window.setScene(levelScene);
             
         });
     }
