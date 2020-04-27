@@ -8,8 +8,7 @@ Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena 
 
 - käyttäjän tulee kirjautua sovellukseen salasanan avulla (tehty)
 - käyttäjä voi valita eri vaikeustasoista (helppo/normaali/vaikea) (tehty)
-- käyttäjä voi aloittaa uuden pelin
-  - jos aiempi peli on kesken, kysytään käyttäjältä varmistus
+- käyttäjä voi koska tahansa aloittaa uuden pelin (tehty)
 - käyttäjä voi klikkailla ruutuja, joista paljastuu joko miina tai klikatun ruudun ympärillä olevien miinojen lukumäärä (0-8) (tehty)
 - jos käyttäjä klikkaa miinaa, kaikki loputkin miinat paljastuvat ja peli loppuu (tehty)
 - käyttäjä voi merkitä miinoja hiiren oikealla painikkeella (tehty)
