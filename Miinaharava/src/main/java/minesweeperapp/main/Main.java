@@ -8,7 +8,7 @@ package minesweeperapp.main;
 import minesweeperapp.ui.MinesweeperUi;
 /**
  *
- * @author saasini
+ * Main class starts the application
  */
 public class Main {
     /**

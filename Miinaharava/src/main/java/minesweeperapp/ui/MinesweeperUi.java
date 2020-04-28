@@ -20,13 +20,17 @@ import javafx.scene.layout.VBox;
 import minesweeperapp.logic.ApplicationLogic;
 /**
  *
- * @author saasini
+ * Class responsible for User Interface (UI)
  */
 public class MinesweeperUi extends Application {
     
     private ApplicationLogic applicationlogic;
     private GridPane gridpane;
     
+    /**
+     * builds User Interface components
+     * @throws Exception 
+     */
     @Override
     public void start(Stage window) throws Exception {
         

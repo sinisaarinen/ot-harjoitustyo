@@ -5,8 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 
 /**
- *
- * @author saasini
+ * Class responsible for individual tiles and their functions
  */
 public class Tile extends Button {
     private int x; 
@@ -17,7 +16,14 @@ public class Tile extends Button {
     private String minesNear;
     private Minefield minefield;
 
-
+    /**
+    * Method creates a new tile and handles mouse clicks
+    *
+    * @param   x   x coordinate
+    * @param   y   y coordinate
+    * @param   containsBomb    Defines if tile has mine
+    * @param   minefield    Variable from Minefield class
+    */
     public Tile(int x, int y, boolean containsBomb, Minefield minefield) {
         this.x = x;
         this.y = y;
@@ -47,11 +53,18 @@ public class Tile extends Button {
     public int getY() {
         return this.y;
     }
-    
+    /**
+    * Method for checking if tile has mine
+    * 
+    * @return true if tile has mine, otherwise false
+    */
     public boolean containsBomb() {
         return containsBomb;
     }
     
+    /**
+    * Method sets tile revealed and writes X on a tile with mine
+    */
     public void setRevealed() {
         this.isRevealed = true;
         if (this.containsBomb == true) {
@@ -63,10 +76,18 @@ public class Tile extends Button {
         return this.getText();
     }
     
+    /**
+    * Method for checking if tile is revealed
+    * 
+    * @return true if tile is revealed, otherwise false
+    */
     public boolean isRevealed() {
         return this.isRevealed;
     }
     
+    /**
+    * Method sets flag on a tile if tile is not revealed
+    */
     public void setFlag() {
         if (isRevealed == true) {
             return;
@@ -75,11 +96,18 @@ public class Tile extends Button {
         this.setText("F");
     }
     
+    /**
+    * Method removes flag from a flagged tile
+    */
     public void removeFlag() {
         this.isFlagged = false;
         this.setText("");
     }
-    
+    /**
+    * Method for checking if tile is flagged
+    * 
+    * @return true if tile is flagged, otherwise false
+    */
     public boolean isFlagged() {
         return isFlagged;
     }

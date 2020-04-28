@@ -15,9 +15,13 @@ import minesweeperapp.logic.ApplicationLogic;
 
 /**
  *
- * @author saasini
+ * Creates the class responsible for minefield
  */
 public class Minefield {
+    /**
+    * ApplicationLogic variable from ApplicationLogic class
+    */
+    public ApplicationLogic applicationlogic;
     
     private Tile[][] tiles;
     private int width;
@@ -25,8 +29,14 @@ public class Minefield {
     private double minePercentage;
     private GridPane grid;
     static Tile tile;
-    public ApplicationLogic applicationlogic;
     
+    /**
+    * Method creates a new minefield and calls method constructField
+    *
+    * @param   width   Width of minefield
+    * @param   height    Height of minefield
+    * @param   difficulty    Defines mine percentage of minefield
+    */
     public Minefield(int width, int height, String difficulty) {
         this.width = width;
         this.height = height;
@@ -47,6 +57,12 @@ public class Minefield {
         return this.height;
     }
     
+    /**
+     * Creates minefield that's size and mine percentage depend on player's
+     * choice of difficulty
+     * 
+     * @param   difficulty    Defines mine percentage of minefield
+     */
     public void constructField(String difficulty) {
         this.tiles = new Tile[this.width][this.height];
         grid = new GridPane();
@@ -76,6 +92,17 @@ public class Minefield {
         return this.tiles;
     }   
     
+     /**
+     * Method that opens the tile clicked by the player. If tile contains mine,
+     * calls methods revealAll and gameOver to reveal remaining mines and
+     * end game. If tile does not contain mine, method calls another method
+     * to calculate mines around the tile and reveals tile to the player with
+     * the number of mines around it written on the tile. Then it sets tile
+     * revealed and check's if game is still running.
+     * 
+     * @param   x    x coordinate
+     * @param   y    y coordinate
+     */
     public void openTile(int x, int y) {
         Tile tile = this.tiles[x][y];
         if (tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
@@ -92,7 +119,10 @@ public class Minefield {
             checkGameStatus();
         }
     }
-    
+     /**
+     * Method that checks if player has won the game and informs the player if
+     * the game has been won. If the game is still on, nothing happens.
+     */
     public void checkGameStatus() {
         int cleared = 0;
         for (int i = 0; i < this.width; i++) {
@@ -107,7 +137,9 @@ public class Minefield {
             victory();
         }
     }
-    
+     /**
+     * Method informs the player that the game is over by showing an alert.
+     */
     public void gameOver() {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("GAME OVER!");
@@ -115,7 +147,9 @@ public class Minefield {
         alert.setContentText("Click New game to try again!");
         alert.showAndWait();
     }
-    
+     /**
+     * Method informs the player about victory by showing an alert.
+     */
     public void victory() {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("YOU WIN!");
@@ -123,7 +157,14 @@ public class Minefield {
         alert.setContentText("Click New game to try again!");
         alert.showAndWait();
     }
-       
+    
+     /**
+     * Method sets flag on the clicked tile or, if the tile is already flagged,
+     * removes the flag from the tile.
+     * 
+     * @param   x    x coordinate
+     * @param   y    y coordinate
+     */   
     public void setFlag(int x, int y) {
         Tile tile = this.tiles[x][y];
         
@@ -134,6 +175,14 @@ public class Minefield {
         }
     }
     
+     /**
+     * Method calculates the number of mines around the clicked tile.
+     * 
+     * @param   x    x coordinate
+     * @param   y    y coordinate
+     * 
+     * @return number of mines around the clicked tile
+     */   
     public int findMinesNear(int x, int y) {
         int minesNear = 0;
         for (int i = -1; i <= 1; i++) {
@@ -145,7 +194,9 @@ public class Minefield {
         }
         return minesNear;
     }
-    
+    /**
+     * Method reveals all remaining unrevealed tiles.
+     */   
     public void revealAll() {
         for (int i = 0; i < this.tiles.length; i++) {
             for (int j = 0; j < this.tiles[0].length; j++) {
