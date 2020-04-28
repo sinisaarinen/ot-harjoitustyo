@@ -52,6 +52,14 @@ Suoritettava tiedosto _Miinaharava-1.0-SNAPSHOT.jar_ löytyy tämän jälkeen ha
 ```
 java -jar Miinaharava-1.0-SNAPSHOT.jar
 ```
+### JavaDoc
+
+JavaDoc luodaan komennolla
+```
+mvn javadoc:javadoc
+```
+JavaDocia voi tarkastella avaamalla selaimella tiedoston _target/site/apidocs/index.html_
+
 
 ### Checkstyle
 
