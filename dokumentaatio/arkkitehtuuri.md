@@ -29,14 +29,20 @@ Sovelluksen osien suhdetta kuvaava luokka/pakkauskaavio:
 
 ### Päätoiminnallisuudet
 
-Sovelluksen toimintalogiikan päätoiminnollisuuksien sekvenssikaaviot:
+Seuraavaksi esitellään kaksi sovelluksen toimintalogiikan päätoiminnallisuutta sekvenssikaavioina.
 
 #### Kirjautuminen
 
+Kun käyttäjä syöttää kirjautumisnäkymässä salasanan ja painaa `Login`, etenee sovelluksen kontrolli seuraavasti:
+
 ![](sekvenssikaavio_kirjautuminen.png)
+
+Nappulan painamiseen reagoiva tapahtumakäsittelijä kutsuu sovelluslogiikan ApplicationLogic metodia passwordCorrect parametrinaan syötetty salasana. Jos salasana on oikea, kirjautuminen onnistuu ja näkymäksi vaihtuu levelScene, jossa käyttäjä pääsee valitsemaan vaikeustason.
 
 #### Uuden pelin aloittaminen
 
-Huom.! Uuden pelin aloittamista ei ole vielä toteutettu - uusi peli käynnistyy tällä hetkellä, kun sovellukseen kirjaudutaan sisään. Toiminto lisätään lähitulevaisuudessa.
+Kun käyttäjä on valinnut vaikeustason ja painanut `Start`, peli käynnistyy ja sovelluksen kontrolli etenee seuraavasti:
 
 ![](sekvenssikaavio_uusipeli.png)
+
+Käyttöliittymä kutsuu logiikan kautta Minefield-luokassa uuden pelikentän rakentavaa constructField-metodia ja tämän jälkeen liittää rakennetun pelikentän käyttöliittymää kutsumalla getGrid-metodia. Pelinäkymä avautuu nyt pelaajalle.
