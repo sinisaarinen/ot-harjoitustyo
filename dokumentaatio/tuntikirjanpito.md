@@ -15,4 +15,5 @@ Päivä | Aika | Mitä tein
 27.4. | 2 h | Lisättiin uusi näkymä, jossa mahdollisuus valita vaikeustaso
 27.4. | 3 h | Lisättiin vaikeustasoille eri kokoiset kentät ja uuden pelin aloitusmahdollisuus, päivitettiin dokumentaatiota
 27.4. | 2 h | Voitosta/häviöstä ilmoittamisen kehittelyä, ilmoitukset pelaajalle voitosta/häviöstä
-yht. | 33,5 h
+28.4. | 2 h | Kaksi uutta testiä, siistittiin koodia
+yht. | 35,5 h
