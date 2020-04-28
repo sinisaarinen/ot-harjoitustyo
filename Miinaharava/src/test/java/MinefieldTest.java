@@ -22,6 +22,7 @@ import org.junit.runner.RunWith;
 @RunWith(JfxRunner.class)
 public class MinefieldTest {
     
+    private static final double DELTA = 1e-15;
     Minefield minefield;
     Tile tile;
     
@@ -57,5 +58,15 @@ public class MinefieldTest {
         assertTrue(tile.isFlagged());
         minefield.setFlag(2, 4);
         assertFalse(tile.isFlagged());
+    }
+    
+    @Test
+    public void constructFieldMethodWorks() {
+        minefield.constructField("easy");
+        assertEquals(0.1, minefield.getMinePercentage(), DELTA);
+        minefield.constructField("normal");
+        assertEquals(0.2, minefield.getMinePercentage(), DELTA);
+        minefield.constructField("hard");
+        assertEquals(0.3, minefield.getMinePercentage(), DELTA);
     }
 }

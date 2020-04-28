@@ -28,4 +28,9 @@ public class MiinaharavaTest {
     public void wrongPasswordCreatesErrorMessage() {
         assertFalse(applicationlogic.passwordCorrect("wrongpassword"));
     }
+    
+    @Test
+    public void correctPasswordReturnsTrue() {
+        assertTrue(applicationlogic.passwordCorrect("password"));
+    }
 }

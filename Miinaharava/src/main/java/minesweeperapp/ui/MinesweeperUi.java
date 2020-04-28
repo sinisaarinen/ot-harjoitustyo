@@ -111,7 +111,6 @@ public class MinesweeperUi extends Application {
         
         easy.setOnAction((event) -> {
             applicationlogic = new ApplicationLogic(10, 10, "easy");
-            applicationlogic.setEasy();
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Easy");
               
@@ -119,7 +118,6 @@ public class MinesweeperUi extends Application {
                
         normal.setOnAction((event) -> {
             applicationlogic = new ApplicationLogic(18, 18, "normal");
-            applicationlogic.setNormal();
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Normal");
            
@@ -127,7 +125,6 @@ public class MinesweeperUi extends Application {
         
         hard.setOnAction((event) -> {
             applicationlogic = new ApplicationLogic(26, 26, "hard");
-            applicationlogic.setHard();
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Hard");
         });

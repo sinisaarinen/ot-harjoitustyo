@@ -35,6 +35,10 @@ public class Minefield {
         constructField(difficulty);
     }
     
+    public double getMinePercentage() {
+        return this.minePercentage;
+    }
+    
     public int getWidth() {
         return this.width;
     }
