@@ -12,6 +12,8 @@ HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
 
 [Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](dokumentaatio/kayttoohje.md)
+
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 
 ## Releaset
