@@ -1,5 +1,13 @@
 # Arkkitehtuurikuvaus
 
+## Rakenne
+
+Sovellus noudattaa kolmiosaista kerrosarkkitehtuuria:
+
+![](kaavio_rakenne.png)
+
+Pakkaus _minesweeperapp.ui_ sisältää käyttöliittymän, _minesweeperapp.logic_ sovelluslogiikan ja _minesweeperapp.model_ miinakenttää sekä yksittäistä ruutua kuvaavat luokat.
+
 ## Sovelluslogiikka
 
 Sovelluksen osien suhdetta kuvaava luokka/pakkauskaavio:
