@@ -95,8 +95,8 @@ public class Minefield {
     
     public void checkGameStatus() {
         int cleared = 0;
-        for (int i=0; i<this.width; i++) {
-            for (int j=0; j<this.height; j++) {
+        for (int i = 0; i < this.width; i++) {
+            for (int j = 0; j < this.height; j++) {
                 Tile tile = this.tiles[i][j];
                 if (tile.isRevealed() || tile.containsBomb()) {
                     cleared++;
