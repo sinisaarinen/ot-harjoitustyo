@@ -41,7 +41,7 @@ Nappulan painamiseen reagoiva tapahtumakäsittelijä kutsuu sovelluslogiikan App
 
 #### Uuden pelin aloittaminen
 
-Kun käyttäjä on valinnut vaikeustason ja painanut `Start`, peli käynnistyy ja sovelluksen kontrolli etenee seuraavasti:
+Kun käyttäjä on valinnut vaikeustason (sekvenssikaaviossa tasoksi on valittu "easy") ja painanut `Start`, peli käynnistyy ja sovelluksen kontrolli etenee seuraavasti:
 
 ![](sekvenssikaavio_uusipeli.png)
 
