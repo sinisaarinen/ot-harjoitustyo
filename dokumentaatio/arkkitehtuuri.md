@@ -8,7 +8,20 @@ Sovellus noudattaa kolmiosaista kerrosarkkitehtuuria:
 
 Pakkaus _minesweeperapp.ui_ sisältää käyttöliittymän, _minesweeperapp.logic_ sovelluslogiikan ja _minesweeperapp.model_ miinakenttää sekä yksittäistä ruutua kuvaavat luokat.
 
+## Käyttöliittymä
+
+Käyttöliittymä sisältää kolme erillistä näkymää:
+- kirjautuminen
+- tason valitseminen
+- pelinäkymä
+
+Kaikki näkymät on toteutettu omana Scene-olionaan, ja niistä on kerrallaan yksi näkyvissä eli sijoitettuna stageen.
+
+Käyttöliittymä on rakennettu luokassa _minesweeperapp.ui.MinesweeperUi_. Käyttöliittymä on eriytetty sovelluslogiikasta, ja se kutsuu sovelluslogiikan metodeja.
+
 ## Sovelluslogiikka
+
+Pelin toiminnollisuuden luovat luokat Minefield ja Tile, ja luokka ApplicationLogic yhdistää Minefield- ja Tile-luokkien toiminnallisuudet pelin logiikaksi.
 
 Sovelluksen osien suhdetta kuvaava luokka/pakkauskaavio:
 
