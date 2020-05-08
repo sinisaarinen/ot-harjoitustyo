@@ -6,7 +6,6 @@
 package minesweeperapp.logic;
 
 import minesweeperapp.model.Minefield;
-
 /**
  *
  * Class creates the application logic

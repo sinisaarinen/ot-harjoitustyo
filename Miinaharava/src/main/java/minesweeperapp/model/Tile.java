@@ -34,8 +34,8 @@ public class Tile extends Button {
         this.setPrefSize(28, 28);
         this.setOnMouseClicked(event -> {
             if (event.getButton() == MouseButton.PRIMARY) {
-                minefield.openTile(x, y);
-            }
+                    minefield.openTile(x, y);
+                }
             if (event.getButton() == MouseButton.SECONDARY) {
                 if (!isFlagged) {
                     setFlag();

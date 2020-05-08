@@ -25,6 +25,7 @@ public class Minefield {
     private int width;
     private int height;
     private double minePercentage;
+    private String difficulty;
     private GridPane grid;
     static Tile tile;
     
@@ -39,12 +40,17 @@ public class Minefield {
         this.width = width;
         this.height = height;
         this.applicationlogic = applicationlogic;
+        this.difficulty = difficulty;
         
         constructField(difficulty);
     }
     
     public double getMinePercentage() {
         return this.minePercentage;
+    }
+    
+    public String getDifficulty() {
+        return this.difficulty;
     }
     
     public int getWidth() {
@@ -198,6 +204,7 @@ public class Minefield {
     }
      /**
      * Method informs the player about victory by showing an alert.
+     * @throws java.lang.Exception
      */
     public void victory() {
         Alert alert = new Alert(AlertType.INFORMATION);

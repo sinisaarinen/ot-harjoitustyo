@@ -5,6 +5,8 @@
  */
 package minesweeperapp.ui;
 
+import dao.Database;
+import java.sql.*;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -26,6 +28,7 @@ public class MinesweeperUi extends Application {
     
     private ApplicationLogic applicationlogic;
     private GridPane gridpane;
+    private Database database;
     
     /**
      * builds User Interface components
@@ -34,6 +37,7 @@ public class MinesweeperUi extends Application {
     @Override
     public void start(Stage window) throws Exception {
         
+        database = new Database("jdbc:sqlite:victories.db");
         applicationlogic = new ApplicationLogic(26, 26, "easy");
         
         //Log in view
@@ -61,6 +65,7 @@ public class MinesweeperUi extends Application {
         BorderPane levelPane = new BorderPane();
         Label levelTitle = new Label("Welcome to play Minesweeper!");
         
+        Label gameCount = new Label("You have played the game " + database.findAll() + " times");
         Label levelInstr = new Label("Choose difficulty");
         Button easy = new Button("Easy");
         Button normal = new Button("Normal");
@@ -75,6 +80,7 @@ public class MinesweeperUi extends Application {
         
         VBox selectLevel = new VBox();
         selectLevel.setSpacing(20);
+        selectLevel.getChildren().add(gameCount);
         selectLevel.getChildren().add(levelInstr);
         selectLevel.getChildren().add(levelHBox);
         selectLevel.getChildren().add(startButton);
@@ -117,14 +123,12 @@ public class MinesweeperUi extends Application {
             applicationlogic = new ApplicationLogic(10, 10, "easy");
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Easy");
-              
         });
                
         normal.setOnAction((event) -> {
             applicationlogic = new ApplicationLogic(18, 18, "normal");
             layout.setCenter(applicationlogic.minefield.getGrid());
             levelInstr.setText("Difficulty chosen: Normal");
-           
         });
         
         hard.setOnAction((event) -> {
@@ -135,6 +139,14 @@ public class MinesweeperUi extends Application {
         
         startButton.setOnAction((event) -> {
             levelInstr.setText("Good luck!");
+            try {
+                database = new Database("jdbc:sqlite:victories.db");
+            } catch (SQLException ex) {
+            }
+            try {
+                database.save();
+            } catch (SQLException ex) {
+            }
             window.setScene(gamescene);
             
         });
