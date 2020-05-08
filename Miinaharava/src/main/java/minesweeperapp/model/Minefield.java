@@ -136,9 +136,9 @@ public class Minefield {
         }
         if (cleared == this.width * this.height) {
             victory();
+            revealAll();
         }
-    }
-    
+    }  
     /**
      * Method opens all unrevealed tiles without mines if a clicked tile has
      * zero mines around it.
