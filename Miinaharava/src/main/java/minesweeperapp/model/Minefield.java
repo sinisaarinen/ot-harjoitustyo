@@ -149,6 +149,7 @@ public class Minefield {
     public void openTilesAround(int x, int y) {
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
+                //makes sure that tile is located on minefield
                 if (x + i >= 0 && x + i < this.width && y + j >= 0 && y + j < this.height) {
                     Tile tile = tiles[x + i][y + j];    
                     if (!tile.containsBomb() && !tile.isRevealed()) { 
@@ -215,6 +216,7 @@ public class Minefield {
         int minesNear = 0;
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
+                //if tile is on minefield and has mine, add it to the sum of mines near
                 if (x + i >= 0 && x + i < this.width && y + j >= 0 && y + j < this.height && this.tiles[x + i][y + j].containsBomb()) {
                     minesNear++;
                 }
