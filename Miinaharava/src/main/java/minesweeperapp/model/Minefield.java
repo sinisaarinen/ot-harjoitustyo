@@ -114,6 +114,7 @@ public class Minefield {
                 tile.setText("" + findMinesNear(x, y));
             } else {
                 tile.setText("0");
+                openTilesAround(x, y);
             }
             tile.setRevealed();
             checkGameStatus();
@@ -137,6 +138,26 @@ public class Minefield {
             victory();
         }
     }
+    
+    public void openTilesAround(int x, int y) {
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; j++) {
+                if (x + i >= 0 && x + i < this.width && y + j >= 0 && y + j < this.height) {
+                    Tile tile = tiles[x + i][y + j];    
+                    if (!tile.containsBomb() && !tile.isRevealed()) { 
+                        tile.setRevealed();
+                        if (findMinesNear(x + i, y + j) > 0) {
+                            tile.setText("" + findMinesNear(x + i, y + j));
+                        } else {
+                            tile.setText("0");
+                            openTilesAround(x + i, y + j);
+                        }
+                    }
+                }                    
+            }
+        }
+    }
+    
      /**
      * Method informs the player that the game is over by showing an alert.
      */
