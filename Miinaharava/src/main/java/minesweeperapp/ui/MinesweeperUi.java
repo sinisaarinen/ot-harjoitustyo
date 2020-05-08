@@ -7,6 +7,8 @@ package minesweeperapp.ui;
 
 import dao.Database;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -29,6 +31,7 @@ public class MinesweeperUi extends Application {
     private ApplicationLogic applicationlogic;
     private GridPane gridpane;
     private Database database;
+    private Label gameCount;
     
     /**
      * builds User Interface components
@@ -65,7 +68,7 @@ public class MinesweeperUi extends Application {
         BorderPane levelPane = new BorderPane();
         Label levelTitle = new Label("Welcome to play Minesweeper!");
         
-        Label gameCount = new Label("You have played the game " + database.findAll() + " times");
+        gameCount = new Label("You have played the game " + database.findAll() + " times");
         Label levelInstr = new Label("Choose difficulty");
         Button easy = new Button("Easy");
         Button normal = new Button("Normal");
@@ -152,6 +155,11 @@ public class MinesweeperUi extends Application {
         });
         
         newGameButton.setOnAction((event) -> {
+            try {
+                gameCount.setText("You have played the game " + database.findAll() + " times");
+            } catch (SQLException ex) {
+            }
+            
             window.setScene(levelScene);
             
         });
