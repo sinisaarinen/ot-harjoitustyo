@@ -139,6 +139,13 @@ public class Minefield {
         }
     }
     
+    /**
+     * Method opens all unrevealed tiles without mines if a clicked tile has
+     * zero mines around it.
+     * 
+     * @param   x    x coordinate
+     * @param   y    y coordinate
+     */   
     public void openTilesAround(int x, int y) {
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
