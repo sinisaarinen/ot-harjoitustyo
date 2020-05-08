@@ -61,7 +61,12 @@ public class Tile extends Button {
     public boolean containsBomb() {
         return containsBomb;
     }
-    
+    /**
+    * Method removes mine from tile
+    */
+    public void removeBomb() {
+        this.containsBomb = false;
+    }
     /**
     * Method sets tile revealed and writes X on a tile with mine
     */

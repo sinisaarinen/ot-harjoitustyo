@@ -105,6 +105,11 @@ public class Minefield {
      */
     public void openTile(int x, int y) {
         Tile tile = this.tiles[x][y];
+        //if first tile clicked contains mine, mine is removed
+        int revealed = countTilesRevealed();
+        if (revealed == 0 && tile.containsBomb()) {
+            tile.removeBomb();
+        }
         if (tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
             tile.setText("X");
             revealAll();
@@ -120,6 +125,24 @@ public class Minefield {
             checkGameStatus();
         }
     }
+     /**
+     * Method that counts the sum of tiles revealed on minefield.
+     *
+     * @return number of tiles revealed
+     * 
+     */
+    public int countTilesRevealed() {
+        int revealed = 0;
+        for (int i = 0; i < this.width; i++) {
+            for (int j = 0; j < this.height; j++) {
+                Tile tile = this.tiles[i][j];
+                if (tile.isRevealed()) {
+                    revealed++;
+                }
+            }
+        }
+        return revealed;
+    }  
      /**
      * Method that checks if player has won the game and informs the player if
      * the game has been won. If the game is still on, nothing happens.
