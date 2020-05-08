@@ -5,8 +5,6 @@
  */
 package minesweeperapp.model;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
@@ -93,8 +91,9 @@ public class Minefield {
     }   
     
      /**
-     * Method that opens the tile clicked by the player. If tile contains mine,
-     * calls methods revealAll and gameOver to reveal remaining mines and
+     * Method that opens the tile clicked by the player. If first tile contains 
+     * mine, mine is removed. Else if tile contains mine, methods
+     * revealAll and gameOver are called to reveal remaining mines and
      * end game. If tile does not contain mine, method calls another method
      * to calculate mines around the tile and reveals tile to the player with
      * the number of mines around it written on the tile. Then it sets tile
@@ -105,9 +104,7 @@ public class Minefield {
      */
     public void openTile(int x, int y) {
         Tile tile = this.tiles[x][y];
-        //if first tile clicked contains mine, mine is removed
-        int revealed = countTilesRevealed();
-        if (revealed == 0 && tile.containsBomb()) {
+        if (countTilesRevealed() == 0 && tile.containsBomb()) {
             tile.removeBomb();
         }
         if (tile.containsBomb() && !tile.isRevealed() && !tile.isFlagged()) {
@@ -240,7 +237,8 @@ public class Minefield {
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
                 //if tile is on minefield and has mine, add it to the sum of mines near
-                if (x + i >= 0 && x + i < this.width && y + j >= 0 && y + j < this.height && this.tiles[x + i][y + j].containsBomb()) {
+                if (x + i >= 0 && x + i < this.width && y + j >= 0 
+                        && y + j < this.height && this.tiles[x + i][y + j].containsBomb()) {
                     minesNear++;
                 }
             }

@@ -16,7 +16,6 @@ public class ApplicationLogic {
     * Minefield variable from Minefield class
     */
     public Minefield minefield;
-    
     /**
     * Method creates a new minefield with parameters depending on the
     * player's choice

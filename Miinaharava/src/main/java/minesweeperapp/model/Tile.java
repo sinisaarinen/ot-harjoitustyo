@@ -15,7 +15,7 @@ public class Tile extends Button {
     private boolean isFlagged;
     private String minesNear;
     private Minefield minefield;
-
+    
     /**
     * Method creates a new tile and handles mouse clicks
     *
