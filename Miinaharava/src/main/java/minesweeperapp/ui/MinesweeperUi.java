@@ -37,7 +37,7 @@ public class MinesweeperUi extends Application {
     @Override
     public void start(Stage window) throws Exception {
         
-        database = new Database("jdbc:sqlite:victories.db");
+        database = new Database("jdbc:sqlite:games.db");
         applicationlogic = new ApplicationLogic(26, 26, "easy");
         
         //Log in view
@@ -140,7 +140,7 @@ public class MinesweeperUi extends Application {
         startButton.setOnAction((event) -> {
             levelInstr.setText("Good luck!");
             try {
-                database = new Database("jdbc:sqlite:victories.db");
+                database = new Database("jdbc:sqlite:games.db");
             } catch (SQLException ex) {
             }
             try {

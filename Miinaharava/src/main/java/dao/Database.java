@@ -18,13 +18,13 @@ public class Database {
     
     public Database(String database) throws SQLException {
         this.database = database;
-        this.db = DriverManager.getConnection("jdbc:sqlite:victories.db");
+        this.db = DriverManager.getConnection("jdbc:sqlite:games.db");
         createDataBase();
     }
     
     public void createDataBase() {
         try {
-            this.db = DriverManager.getConnection("jdbc:sqlite:victories.db");
+            this.db = DriverManager.getConnection("jdbc:sqlite:games.db");
             Statement s = db.createStatement();
             s.execute("PRAGMA foreign_keys = ON");
             s.execute("CREATE TABLE Games (game TEXT)");
