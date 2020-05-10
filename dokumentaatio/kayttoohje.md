@@ -19,6 +19,8 @@ Ohjelma avautuu aluksi kirjautumisnäkymään. Syötä salasana _password_ ja pa
 
 Seuraavaksi pääset valitsemaan pelin tasoksi joko helpon, normaalin tai vaikean tason. Klikkaa haluamaasi tasoa ja paina `Start`.
 
+Tässä näkymässä näet myös kuinka monta kertaa olet pelannut peliä.
+
 ![](tasonakyma.png)
 
 ## Peli alkaa
