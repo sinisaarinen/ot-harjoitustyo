@@ -27,7 +27,7 @@ Tässä näkymässä näet myös kuinka monta kertaa olet pelannut peliä.
 
 Nyt voit aloittaa pelaamisen. Klikkaamalla ruutuja ne avautuvat, ja niistä paljastuu joko niitä ympäröivien miinojen lukumäärä (0-8) tai miina. Miinan voi merkitä klikkaamalla ruutua hiiren oikealla painikkeella. Voitat pelin klikkaamalla auki kaikki miinattomat ruudut. Jos haluat aloittaa uuden pelin tai vaihtaa tasoa, paina `New game`.
 
-![](pelinakyma.png)
+![](pelinakyma_updated.png)
 
 ## Game over
 
