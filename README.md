@@ -22,6 +22,8 @@ HUOM! Miinaharavapeliin pääsee kirjautumaan salasanalla "password".
 
 [Viikko 6](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/viikko6)
 
+[Loppupalautus](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/Loppupalautus)
+
 ## Komentorivitoiminnot
 
 Projektin koodin voi suorittaa komennolla
