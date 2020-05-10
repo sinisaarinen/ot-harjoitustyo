@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import de.saxsys.javafx.test.JfxRunner;
 import minesweeperapp.logic.ApplicationLogic;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Before;
 import org.junit.runner.RunWith;
+
 /**
  *
  * @author saasini
  */
 @RunWith(JfxRunner.class)
-public class MiinaharavaTest {
-    
+public class ApplicationLogicTest {
+ 
     ApplicationLogic applicationlogic;
     
     @Before

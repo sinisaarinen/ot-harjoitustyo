@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 import de.saxsys.javafx.test.JfxRunner;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 import minesweeperapp.model.Minefield;
 import minesweeperapp.model.Tile;
 import org.junit.Before;
@@ -78,6 +76,12 @@ public class TileTest {
     public void removeFlagMethodChangesBooleanValue() {
         tile.removeFlag();
         assertFalse(tile.isFlagged());
+    }
+    
+    @Test
+    public void removeBombMethodChangesBooleanValue() {
+        tile.removeBomb();
+        assertFalse(tile.containsBomb());
     }
     
     @Test

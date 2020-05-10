@@ -7,10 +7,7 @@
 import de.saxsys.javafx.test.JfxRunner;
 import minesweeperapp.model.Minefield;
 import minesweeperapp.model.Tile;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
@@ -43,6 +40,11 @@ public class MinefieldTest {
     }
     
     @Test
+    public void getDifficultyMethodReturnsCorrectDifficulty() {
+        assertEquals("easy", minefield.getDifficulty());
+    }
+
+    @Test
     public void openTileMethodWorks() {
         minefield.openTile(2, 4);
         Tile[][] field = minefield.getField();
@@ -68,5 +70,16 @@ public class MinefieldTest {
         assertEquals(0.2, minefield.getMinePercentage(), DELTA);
         minefield.constructField("hard");
         assertEquals(0.3, minefield.getMinePercentage(), DELTA);
+    }
+    
+    @Test
+    public void revealAllMethodRevealsAllTiles() {
+        minefield.revealAll();
+        Tile[][] tiles = minefield.getField();
+        for (int i = 0; i < minefield.getWidth(); i++) {
+            for (int j = 0; j < minefield.getHeight(); j++) {
+                assertTrue(tiles[i][j].isRevealed());
+            }
+        }
     }
 }
