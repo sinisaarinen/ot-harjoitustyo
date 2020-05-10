@@ -2,11 +2,11 @@
 
 ## Rakenne
 
-Sovellus noudattaa kolmiosaista kerrosarkkitehtuuria:
+Sovellus noudattaa neliosaista kerrosarkkitehtuuria:
 
 ![](kuvatjakaaviot/kaavio_rakenne.png)
 
-Pakkaus _minesweeperapp.ui_ sisältää käyttöliittymän, _minesweeperapp.logic_ sovelluslogiikan ja _minesweeperapp.model_ miinakenttää sekä yksittäistä ruutua kuvaavat luokat.
+Pakkaus _minesweeperapp.ui_ sisältää käyttöliittymän, _minesweeperapp.logic_ sovelluslogiikan ja _minesweeperapp.model_ miinakenttää sekä yksittäistä ruutua kuvaavat luokat. Tietokantaan liittyvät toiminnot sisältävä luokka löytyy pakkauksesta _minesweeperapp.dao_.
 
 ## Käyttöliittymä
 
@@ -27,11 +27,15 @@ Sovelluksen osien suhdetta kuvaava luokka/pakkauskaavio:
 
 ![](kuvatjakaaviot/kaavio_alustava.jpg)
 
-### Päätoiminnallisuudet
+## Tietojen pysyväistalletus
+
+Tietojen pysyväistalletukseen käytetään SQLite-tietokantaa. Pakkauksen _minesweeperapp.dao_ luokka Database huolehtii tietokantayhteyksistä sekä tiedon tallentamisesta ja hakemisesta tietokannasta. Sitä kutsutaan käyttöliittymästä: kun pelaaja aloittaa uuden pelin, tallentuu tästä tieto tietokantaan. Samaten kun käyttäjä siirtyy tasonäkymään, kutsutaan käyttöliittymästä Database-luokan metodia, joka hakee tietokannasta pelaajan pelikertojen summan ja näyttää sen pelaajalle. Pelikertojen määrä päivittyy aina uuden pelin pelaamisen jälkeen.
+
+## Päätoiminnallisuudet
 
 Seuraavaksi esitellään kaksi sovelluksen toimintalogiikan päätoiminnallisuutta sekvenssikaavioina.
 
-#### Kirjautuminen
+### Kirjautuminen
 
 Kun käyttäjä syöttää kirjautumisnäkymässä salasanan ja painaa `Login`, etenee sovelluksen kontrolli seuraavasti:
 
@@ -39,7 +43,7 @@ Kun käyttäjä syöttää kirjautumisnäkymässä salasanan ja painaa `Login`, 
 
 Nappulan painamiseen reagoiva tapahtumakäsittelijä kutsuu sovelluslogiikan ApplicationLogic metodia passwordCorrect parametrinaan syötetty salasana. Jos salasana on oikea, kirjautuminen onnistuu ja näkymäksi vaihtuu levelScene, jossa käyttäjä pääsee valitsemaan vaikeustason.
 
-#### Uuden pelin aloittaminen
+### Uuden pelin aloittaminen
 
 Kun käyttäjä on valinnut vaikeustason (sekvenssikaaviossa tasoksi on valittu "easy") ja painanut `Start`, peli käynnistyy ja sovelluksen kontrolli etenee seuraavasti:
 
