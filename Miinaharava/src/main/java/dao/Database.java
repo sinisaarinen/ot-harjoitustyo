@@ -21,71 +21,95 @@ public class Database {
     * Method sets up database connections and calls the method createDataBase
     *
     * @param   database   Defines the name of the database
-    * @throws SQLException
     */
-    public Database(String database) throws SQLException {
-        this.database = database;
-        this.db = DriverManager.getConnection(database);
-        createDataBase();
+    public Database(String database) {
+        try {
+            this.database = database;
+            this.db = DriverManager.getConnection(database);
+            createDataBase();
+        } catch (SQLException ex) {
+            //if fails, method does not do anything
+        }
     }
     /**
     * Method creates database table
+    * 
+    * @return true if creating database is completed, otherwise false
     */
-    public void createDataBase() {
+    public boolean createDataBase() {
         try {
             this.db = DriverManager.getConnection(database);
             Statement s = db.createStatement();
             s.execute("PRAGMA foreign_keys = ON");
             s.execute("CREATE TABLE Games (game TEXT)");
-        } catch (SQLException e) {
+            return true;
+        } catch (SQLException ex) {
+            //return false if fails
+            return false;
         }
     }
     /**
     * Method used to get database connection
     *
-    * @return database connection
-    * @throws SQLException
+    * @return database connection if connecting to the database works,
+    * otherwise return null
     */
-    public Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(database);
+    public Connection getConnection() {
+        try {
+            return DriverManager.getConnection(database);
+        } catch (SQLException ex) {
+            //return null if fails
+            return null;
+        }
     }
     /**
     * Method retrieves information about the number of games played 
     * from the database
     *
-    * @return number of times played
-    * @throws SQLException
+    * @return number of times played if retrieving information works, 
+    * otherwise return -1
     */
-    public int findAll() throws SQLException {
-        ArrayList<String> games = new ArrayList<>();
-        Connection c = getConnection();
-        PreparedStatement ps = c.prepareStatement("SELECT * FROM Games");
-        ResultSet results = ps.executeQuery();
-        while (results.next()) {
-            games.add(results.getString("game"));
+    public int findAll() {
+        try {
+            ArrayList<String> games = new ArrayList<>();
+            Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("SELECT * FROM Games");
+            ResultSet results = ps.executeQuery();
+            while (results.next()) {
+                games.add(results.getString("game"));
+            }
+            ps.close();
+            results.close();
+            c.close();
+            if (games.isEmpty()) {
+                return 0;
+            }
+            return games.size();
+        } catch (SQLException ex) {
+            //return -1 when fails
+            return -1;
         }
-        ps.close();
-        results.close();
-        c.close();
-        if (games.isEmpty()) {
-            return 0;
-        }
-        return games.size();
     }
     /**
     * Method saves information to the database
     * 
-    * @throws SQLException
+    * @return true if saving is completed, otherwise false
     */
-    public void save() throws SQLException {
-        Connection c = getConnection();
-        PreparedStatement ps = c.prepareStatement("INSERT INTO Games"
-                + " (game)"
-                + " VALUES (?)"
-        );
-        ps.setString(1, "newgame");
-        ps.executeUpdate();
-        ps.close();
-        c.close();
+    public boolean save() {
+        try {
+            Connection c = getConnection();
+            PreparedStatement ps = c.prepareStatement("INSERT INTO Games"
+                    + " (game)"
+                    + " VALUES (?)"
+            );
+            ps.setString(1, "newgame");
+            ps.executeUpdate();
+            ps.close();
+            c.close();
+            return true;
+        } catch (SQLException ex) {
+            //return false when fails
+            return false;
+        }
     }
 }

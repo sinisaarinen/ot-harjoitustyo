@@ -6,7 +6,6 @@
 package minesweeperapp.ui;
 
 import dao.Database;
-import java.sql.*;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -33,10 +32,10 @@ public class MinesweeperUi extends Application {
     
     /**
      * builds User Interface components
-     * @throws Exception 
+     * @param window    parameter of type Stage
      */
     @Override
-    public void start(Stage window) throws Exception {
+    public void start(Stage window) {
         
         database = new Database("jdbc:sqlite:games.db");
         applicationlogic = new ApplicationLogic(26, 26, "easy");
@@ -140,26 +139,15 @@ public class MinesweeperUi extends Application {
         
         startButton.setOnAction((event) -> {
             levelInstr.setText("Good luck!");
-            try {
-                database = new Database("jdbc:sqlite:games.db");
-            } catch (SQLException ex) {
-            }
-            try {
-                database.save();
-            } catch (SQLException ex) {
-            }
+            database = new Database("jdbc:sqlite:games.db");
+            database.save();
             window.setScene(gamescene);
             
         });
         
         newGameButton.setOnAction((event) -> {
-            try {
-                gameCount.setText("You have played the game " + database.findAll() + " times");
-            } catch (SQLException ex) {
-            }
-            
-            window.setScene(levelScene);
-            
+            gameCount.setText("You have played the game " + database.findAll() + " times");
+            window.setScene(levelScene);          
         });
     }
     public static void main(String[] args) {

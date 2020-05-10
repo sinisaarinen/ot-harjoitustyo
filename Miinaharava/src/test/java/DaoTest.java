@@ -6,7 +6,6 @@
 
 import dao.Database;
 import java.io.File;
-import java.sql.*;
 import org.junit.AfterClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -18,7 +17,7 @@ import static org.junit.Assert.*;
 public class DaoTest {
 
     @Test
-    public void savingToDatabaseWorks() throws SQLException {
+    public void savingToDatabaseWorks() {
         Database database = new Database("jdbc:sqlite:test.db");
         database.save();
         assertEquals(1, database.findAll());
@@ -26,7 +25,7 @@ public class DaoTest {
     }
     
     @Test
-    public void findAllMethodReturns0IfDatabaseIsEmpty() throws SQLException {
+    public void findAllMethodReturns0IfDatabaseIsEmpty() {
         Database database = new Database("jdbc:sqlite:test.db");
         assertEquals(0, database.findAll());
     }
