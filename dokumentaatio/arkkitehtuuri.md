@@ -4,7 +4,7 @@
 
 Sovellus noudattaa kolmiosaista kerrosarkkitehtuuria:
 
-![]('kuvat ja kaaviot'/kuvkaavio_rakenne.png)
+![](kuvatjakaaviot/kuvkaavio_rakenne.png)
 
 Pakkaus _minesweeperapp.ui_ sisältää käyttöliittymän, _minesweeperapp.logic_ sovelluslogiikan ja _minesweeperapp.model_ miinakenttää sekä yksittäistä ruutua kuvaavat luokat.
 
@@ -25,7 +25,7 @@ Pelin toiminnollisuuden luovat luokat Minefield ja Tile, ja luokka ApplicationLo
 
 Sovelluksen osien suhdetta kuvaava luokka/pakkauskaavio:
 
-![](kaavio_alustava.jpg)
+![](kuvatjakaaviot/kaavio_alustava.jpg)
 
 ### Päätoiminnallisuudet
 
@@ -35,7 +35,7 @@ Seuraavaksi esitellään kaksi sovelluksen toimintalogiikan päätoiminnallisuut
 
 Kun käyttäjä syöttää kirjautumisnäkymässä salasanan ja painaa `Login`, etenee sovelluksen kontrolli seuraavasti:
 
-![](sekvenssikaavio_kirjautuminen.png)
+![](kuvatjakaaviot/sekvenssikaavio_kirjautuminen.png)
 
 Nappulan painamiseen reagoiva tapahtumakäsittelijä kutsuu sovelluslogiikan ApplicationLogic metodia passwordCorrect parametrinaan syötetty salasana. Jos salasana on oikea, kirjautuminen onnistuu ja näkymäksi vaihtuu levelScene, jossa käyttäjä pääsee valitsemaan vaikeustason.
 
@@ -43,6 +43,6 @@ Nappulan painamiseen reagoiva tapahtumakäsittelijä kutsuu sovelluslogiikan App
 
 Kun käyttäjä on valinnut vaikeustason (sekvenssikaaviossa tasoksi on valittu "easy") ja painanut `Start`, peli käynnistyy ja sovelluksen kontrolli etenee seuraavasti:
 
-![](sekvenssikaavio_uusipeli.png)
+![](kuvatjakaaviot/sekvenssikaavio_uusipeli.png)
 
 Käyttöliittymä kutsuu logiikan kautta Minefield-luokassa uuden pelikentän rakentavaa constructField-metodia ja tämän jälkeen liittää rakennetun pelikentän käyttöliittymää kutsumalla getGrid-metodia. Pelinäkymä avautuu nyt pelaajalle.
