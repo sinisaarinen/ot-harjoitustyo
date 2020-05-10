@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 
 /**
+ * 
  * Class responsible for individual tiles and their functions
  */
 public class Tile extends Button {

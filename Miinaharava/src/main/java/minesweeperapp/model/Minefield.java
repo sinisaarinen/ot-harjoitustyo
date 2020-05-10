@@ -12,7 +12,7 @@ import javafx.scene.text.Font;
 import minesweeperapp.logic.ApplicationLogic;
 
 /**
- *
+ * 
  * Creates the class responsible for minefield
  */
 public class Minefield {
@@ -98,7 +98,7 @@ public class Minefield {
     
      /**
      * Method that opens the tile clicked by the player. If first tile contains 
-     * mine, mine is removed. Else if tile contains mine, methods
+     * mine, mine is removed. After that if tile contains mine, methods
      * revealAll and gameOver are called to reveal remaining mines and
      * end game. If tile does not contain mine, method calls another method
      * to calculate mines around the tile and reveals tile to the player with
@@ -204,7 +204,6 @@ public class Minefield {
     }
      /**
      * Method informs the player about victory by showing an alert.
-     * @throws java.lang.Exception
      */
     public void victory() {
         Alert alert = new Alert(AlertType.INFORMATION);

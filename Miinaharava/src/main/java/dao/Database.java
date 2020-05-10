@@ -8,20 +8,29 @@ package dao;
 import java.sql.*;
 import java.util.ArrayList;
 /**
- *
- * @author saasini
+ * 
+ * Creates the class responsible for database connections, adding information
+ * to the database and retrieving information from the database
  */
 public class Database {
    
     private String database;
     private Connection db;
     
+    /**
+    * Method sets up database connections and calls the method createDataBase
+    *
+    * @param   database   Defines the name of the database
+    * @throws SQLException
+    */
     public Database(String database) throws SQLException {
         this.database = database;
         this.db = DriverManager.getConnection(database);
         createDataBase();
     }
-    
+    /**
+    * Method creates database table
+    */
     public void createDataBase() {
         try {
             this.db = DriverManager.getConnection(database);
@@ -31,11 +40,22 @@ public class Database {
         } catch (SQLException e) {
         }
     }
-    
+    /**
+    * Method used to get database connection
+    *
+    * @return database connection
+    * @throws SQLException
+    */
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(database);
     }
-    
+    /**
+    * Method retrieves information about the number of games played 
+    * from the database
+    *
+    * @return number of times played
+    * @throws SQLException
+    */
     public int findAll() throws SQLException {
         ArrayList<String> games = new ArrayList<>();
         Connection c = getConnection();
@@ -52,7 +72,11 @@ public class Database {
         }
         return games.size();
     }
-    
+    /**
+    * Method saves information to the database
+    * 
+    * @throws SQLException
+    */
     public void save() throws SQLException {
         Connection c = getConnection();
         PreparedStatement ps = c.prepareStatement("INSERT INTO Games"
