@@ -61,7 +61,7 @@ public class Database {
         Connection c = getConnection();
         PreparedStatement ps = c.prepareStatement("SELECT * FROM Games");
         ResultSet results = ps.executeQuery();
-         while (results.next()) {
+        while (results.next()) {
             games.add(results.getString("game"));
         }
         ps.close();
