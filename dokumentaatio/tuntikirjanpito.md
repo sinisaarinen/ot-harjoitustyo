@@ -19,5 +19,5 @@ Päivä | Aika | Mitä tein
 28.4. | 3,5 h | JavaDoc, arkkitehtuuridokumentti ja käyttöohje, muun dokumentaation päivitys
 8.5. | 3 h | Lisättiin ominaisuudet, että ensimmäisessä klikatussa ruudussa ei voi olla miinaa ja nolla miinaa sisältävän klikatun ruudun viereiset miinattomat ruudut aukeavat
 9.5. | 4,5 h | Lisättiin SQLite-tietokanta, joka kertoo pelaajalle, montako kertaa hän on pelannut peliä ja tallettaa uuden pelin aloittamisen tietokantaan
-10.5. | 0,5 h | Koodin siistimistä
-yht. | 47 h
+10.5. | 2 h | Koodin siistimistä, lisää testejä ja Javadoc-viimeistelyt
+yht. | 48,5 h
