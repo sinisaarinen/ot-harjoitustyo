@@ -1,12 +1,12 @@
 # Käyttöohje
 
-Lataa tiedosto [Minesweeper.jar](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/viikko6)
+Lataa tiedosto [MinesweeperApp.jar](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/Loppupalautus)
 
 ## Käynnistys
 
 Sovellus käynnistetään komennolla
 ```
-java -jar Minesweeper.jar
+java -jar MinesweeperApp.jar
 ```
 
 ## Kirjautuminen
