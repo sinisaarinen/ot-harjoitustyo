@@ -39,7 +39,6 @@ public class Minefield {
     public Minefield(int width, int height, String difficulty) {
         this.width = width;
         this.height = height;
-        this.applicationlogic = applicationlogic;
         this.difficulty = difficulty;
         
         constructField(difficulty);
