@@ -4,6 +4,10 @@
 
 Sovellus on yhdelle pelaajalle suunniteltu miinaharavapeli, jonka tarkoituksena on tarjota käyttäjälleen haastavaa viihdykettä. Pelin tarkoitus on läpäistä kenttä klikkaamatta miinoja.
 
+## Käyttöliittymä
+
+Sovelluksessa on graafinen käyttöliittymä. Käyttöliittymä koostuu kolmesta eri näkymistä, josta ensimmäinen (kirjautumisnäkymä) avautuu sovelluksen käynnistyessä. Syöttämällä oikean salasanan ("password") ja painamalla `Login`-näppäintä pääset tasonäkymään, jossa pääset valitsemaan kolmesta tasosta (helppo/normaali/vaikea) ja näät lisäksi, kuinka monta kertaa olet pelannut peliä. Tason valittuasi voit siirtyä pelinäkymään painamalla `Start`.
+
 ## Toteutetut toiminnallisuudet (perusversio)
 
 - käyttäjän tulee kirjautua sovellukseen salasanan avulla
