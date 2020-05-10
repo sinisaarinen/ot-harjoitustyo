@@ -17,4 +17,7 @@ Päivä | Aika | Mitä tein
 27.4. | 2 h | Voitosta/häviöstä ilmoittamisen kehittelyä, ilmoitukset pelaajalle voitosta/häviöstä
 28.4. | 2 h | Kaksi uutta testiä, siistittiin koodia
 28.4. | 3,5 h | JavaDoc, arkkitehtuuridokumentti ja käyttöohje, muun dokumentaation päivitys
-yht. | 39 h
+8.5. | 3 h | Lisättiin ominaisuudet, että ensimmäisessä klikatussa ruudussa ei voi olla miinaa ja nolla miinaa sisältävän klikatun ruudun viereiset miinattomat ruudut aukeavat
+9.5. | 4,5 h | Lisättiin SQLite-tietokanta, joka kertoo pelaajalle, montako kertaa hän on pelannut peliä ja tallettaa uuden pelin aloittamisen tietokantaan
+10.5. | 0,5 h | Koodin siistimistä
+yht. | 47 h
