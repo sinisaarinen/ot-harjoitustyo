@@ -25,7 +25,7 @@ Pelin toiminnollisuuden luovat luokat Minefield ja Tile, ja luokka ApplicationLo
 
 Sovelluksen osien suhdetta kuvaava luokka/pakkauskaavio:
 
-![](kuvatjakaaviot/kaavio_alustava.jpg)
+![](kuvatjakaaviot/kaavio_updated.jpg)
 
 ## Tietojen pysyväistalletus
 
