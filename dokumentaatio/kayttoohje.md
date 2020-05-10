@@ -21,7 +21,7 @@ Seuraavaksi pääset valitsemaan pelin tasoksi joko helpon, normaalin tai vaikea
 
 Tässä näkymässä näet myös kuinka monta kertaa olet pelannut peliä.
 
-![](tasonakyma.png)
+![](tasonakyma_updated.png)
 
 ## Peli alkaa
 
