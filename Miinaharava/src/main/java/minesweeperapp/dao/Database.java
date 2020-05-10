@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package minesweeperapp.dao;
 
 import java.sql.*;
 import java.util.ArrayList;

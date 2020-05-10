@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import dao.Database;
+import minesweeperapp.dao.Database;
 import java.io.File;
 import org.junit.AfterClass;
 import org.junit.Test;

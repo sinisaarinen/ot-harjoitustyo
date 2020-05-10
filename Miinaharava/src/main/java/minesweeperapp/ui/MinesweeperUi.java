@@ -5,7 +5,7 @@
  */
 package minesweeperapp.ui;
 
-import dao.Database;
+import minesweeperapp.dao.Database;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
