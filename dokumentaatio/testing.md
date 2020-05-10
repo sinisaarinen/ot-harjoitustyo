@@ -16,7 +16,7 @@ DAO-luokkaa Database testaa testiluokka DaoTest, joka käyttää testitietokanta
 
 Testauksen rivikattavuus on 86% ja haaraumakattavuus 78%, kun käyttöliittymää ei oteta huomioon. Testaamatta jäi Tile-luokkaan sisällytetty JavaFX:ään kuuluva hiirenklikkauksen käsittely, DAO-luokan SQLExceptioneiden käsittely ja Minefield-luokasta voittoon ja häviöön liittyvät Alertit sekä yksittäisiä rivejä muista metodeista. 
 
-![](testsummary.png)
+![](kuvatjakaaviot/testsummary.png)
 
 ## Järjestelmätestaus
 
