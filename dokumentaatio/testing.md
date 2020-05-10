@@ -4,6 +4,12 @@ Ohjelmaa on testattu sekä yksikkö- ja integraatiotasolla että järjestelmäta
 
 ## Yksikkö- ja integraatiotestaus
 
+### Sovelluslogiikka
+
+### DAO-luokka
+
+### Testikattavuus
+
 ## Järjestelmätestaus
 
 ## Sovellukseen jääneet laatuongelmat
