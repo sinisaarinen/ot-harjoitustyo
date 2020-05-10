@@ -6,7 +6,7 @@ Ohjelmaa on testattu sekä yksikkö- ja integraatiotasolla että järjestelmäta
 
 ### Sovelluslogiikka
 
-Sovelluslogiikkaa eli model- ja logic-pakettien luokkia testattiin kolmen eri testiluokan avulla. Model-pakettiin kuuluvista luokista TileTest vastaa Tile-luokan ja MinefieldTest Minefield-luokan testauksesta. Minefield-luokka sisältää myös integraatiotestausta, jossa testataan sekä luokkia Minefield ja Tile. Logic-paketin luokkaa ApplicationLogic testaa testiluokka ApplicationLogicTest.
+Sovelluslogiikkaa eli model- ja logic-pakettien luokkia testattiin kolmen eri testiluokan avulla. Model-pakettiin kuuluvista luokista TileTest vastaa Tile-luokan ja MinefieldTest Minefield-luokan testauksesta. Minefield-luokka sisältää myös integraatiotestausta, jossa testataan molempia luokkia Minefield ja Tile. Logic-paketin luokkaa ApplicationLogic testaa testiluokka ApplicationLogicTest.
 
 ### DAO-luokka
 
