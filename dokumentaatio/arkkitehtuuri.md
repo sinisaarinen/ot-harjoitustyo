@@ -4,7 +4,7 @@
 
 Sovellus noudattaa neliosaista kerrosarkkitehtuuria:
 
-![](kuvatjakaaviot/kaavio_rakenne.png)
+![](kuvatjakaaviot/kaavio_rakenne_updated.png)
 
 Pakkaus _minesweeperapp.ui_ sisältää käyttöliittymän, _minesweeperapp.logic_ sovelluslogiikan ja _minesweeperapp.model_ miinakenttää sekä yksittäistä ruutua kuvaavat luokat. Tietokantaan liittyvät toiminnot sisältävä luokka löytyy pakkauksesta _minesweeperapp.dao_.
 
