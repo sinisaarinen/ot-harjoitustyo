@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto [MinesweeperApp.jar](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/Loppupalautus)
+Lataa tiedosto [MinesweeperApp.jar](https://github.com/sinisaarinen/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Käynnistys
 
